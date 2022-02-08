@@ -33,10 +33,10 @@ one place.*
 
 As a registered user, I would like to be able to publish my own stories on the site.*
 
-### Add Story Segment
+### Add Story Branch
 
-As a choose-your-own-adventure writer, I will need to write the story in segments, with especial control over how those
-segments relate to each other.*
+As a choose-your-own-adventure writer, I will need to write the story in branches, with especial control over how those
+branches relate to each other.*
 
 ### Edit Story
 
