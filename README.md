@@ -17,18 +17,25 @@ enjoyable.
 * Dependency Management
     * Maven
 * IDE: IntelliJ IDEA
+* Logging
+  * Log4J2
+* Hosting
+  * AWS
 
 
 ### Design
 
 * [User Stories](DesignDocuments/userStories.md)
-* [Tasks](DesignDocuments/tasks.md)
-* [Screen Design](DesignDocuments/Screens.md)
-* [Application Flow](DesignDocuments/applicationFlow.md)
-* [Database Design](DesignDocuments/databaseDiagram.png)
+* [Screen Design](DesignDocuments)
 
-### [Project Plan](ProjectPlan.md)
+[//]: # (* [Application Flow]&#40;DesignDocuments/applicationFlow.md&#41;)
+
+[//]: # (* [Database Design]&#40;DesignDocuments/databaseDiagram.png&#41;)
+
+[//]: # (* [Tasks]&#40;DesignDocuments/tasks.md&#41;)
+
 
 ### Documentation of Progress
 
+#### [Project Plan](ProjectPlan.md)
 #### [TimeLog](TimeLog.md)
