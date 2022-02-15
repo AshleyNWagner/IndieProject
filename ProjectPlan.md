@@ -5,8 +5,8 @@
 - [x] Project Plan
 - [x] Screens
 - [x] User Stories
-- [ ] Log4J
-- [ ] Weekly reflection
+- [x] Log4J
+- [x] Weekly reflection
 
 ### Week 5
 - [ ] Navigation
