@@ -1,5 +1,6 @@
 package edu.matc.entity;
 
+//TODO add constructors
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;

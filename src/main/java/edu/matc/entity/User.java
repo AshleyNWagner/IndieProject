@@ -1,8 +1,10 @@
 package edu.matc.entity;
 
+//TODO add constructors
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.*;
 
 /**
  * The type User.
@@ -27,6 +29,9 @@ public class User {
     private String password;
 
     private String email;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Story> stories = new HashSet<>();
 
     /**
      * Gets first name.
