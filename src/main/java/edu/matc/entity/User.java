@@ -1,6 +1,6 @@
 package edu.matc.entity;
 
-//TODO add constructors
+// TODO confirm password in jsp
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -32,6 +32,17 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Story> stories = new HashSet<>();
+
+    public User() {
+
+    }
+    public User(String firstName, String lastName, String userName, String password, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+    }
 
     /**
      * Gets first name.

@@ -16,7 +16,6 @@ import java.io.IOException;
 /**
  * Servlet that executes search from the nav.
  */
-
 @WebServlet(
         name = "search",
         urlPatterns = {"/search"}

@@ -4,3 +4,5 @@
 [DEBUG] 2022-02-27 05:57:03.567 [http-nio-8080-exec-7] GenericDao - Searching for entity with userName like herbs
 [DEBUG] 2022-02-27 05:57:11.424 [http-nio-8080-exec-8] GenericDao - Searching for entity with userName like john
 [DEBUG] 2022-02-27 05:57:34.600 [http-nio-8080-exec-1] GenericDao - Searching for entity with userName like wagner
+[DEBUG] 2022-02-27 06:47:37.057 [http-nio-8080-exec-9] GenericDao - Searching for entity with userName like ljkdflkjd
+[DEBUG] 2022-02-27 06:48:44.068 [http-nio-8080-exec-1] GenericDao - Searching for entity with userName like be

@@ -5,7 +5,7 @@
 <%@include file="head.jsp"%>
 <body>
 <%@include file="navigation.jsp"%>
-    <h2>Users like ${searchTerm}</h2>
+    <h2>Users like <em>${searchTerm}</em></h2>
     <c:forEach var="user" items="${users}">
         <p>${user.userName}</p>
     </c:forEach>
