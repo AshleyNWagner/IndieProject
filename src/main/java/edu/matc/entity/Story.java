@@ -20,8 +20,8 @@ public class Story {
 
     private String description;
 
-    @Column(name = "user_id")
-    private String userId;
+    @ManyToOne
+    private User user;
 
     @Column(name = "date_created")
     private LocalDate dateCreated;
@@ -35,10 +35,10 @@ public class Story {
     }
 
     // TODO add image
-    public Story(String title, String description, String userId) {
+    public Story(String title, String description, User user) {
         this.title = title;
         this.description = description;
-        this.userId = userId;
+        this.user = user;
         setDateCreated(LocalDate.now());
 
     }
@@ -67,12 +67,12 @@ public class Story {
         this.description = description;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public LocalDate getDateCreated() {
