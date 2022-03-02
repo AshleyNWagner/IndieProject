@@ -152,12 +152,27 @@ public class User {
         this.email = email;
     }
 
+    public void addStory(Story story) {
+        stories.add(story);
+        story.setUser(this);
+    }
+
+    public void removeStory(Story story) {
+        stories.remove(story);
+        story.setUser(null);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(userName, user.userName) && Objects.equals(password, user.password) && Objects.equals(email, user.email);
+        return id == user.id &&
+                Objects.equals(firstName, user.firstName) &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(userName, user.userName) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(email, user.email);
     }
 
     @Override
