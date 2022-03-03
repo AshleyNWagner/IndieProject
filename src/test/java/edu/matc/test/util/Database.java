@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import edu.matc.utilities.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Provides access to the database
@@ -23,7 +25,7 @@ public class Database implements PropertiesLoader {
 
     // create an object of the class Database
     private static Database instance = new Database();
-
+    private final Logger logger = LogManager.getLogger(this.getClass());
     private Properties properties;
     private Connection connection;
 
@@ -41,11 +43,9 @@ public class Database implements PropertiesLoader {
         try {
             properties = loadProperties("/database.properties");
         } catch (IOException ioe) {
-            System.out.println("Database.loadProperties()...Cannot load the properties file");
-            ioe.printStackTrace();
+            logger.error("Database.loadProperties()...Cannot load the properties file", ioe);
         } catch (Exception e) {
-            System.out.println("Database.loadProperties()..." + e);
-            e.printStackTrace();
+            logger.error("Database.loadProperties()...", e);
         }
 
     }
@@ -87,7 +87,7 @@ public class Database implements PropertiesLoader {
             try {
                 connection.close();
             } catch (SQLException e) {
-                System.out.println("Cannot close connection" + e);
+                logger.error("Cannot close connection", e);
             }
         }
 
@@ -123,9 +123,9 @@ public class Database implements PropertiesLoader {
             }
 
         } catch (SQLException se) {
-            System.out.println("SQL Exception" + se);
+            logger.error("SQL Exception", se);
         } catch (Exception e) {
-            System.out.println("Exception" + e);
+            logger.error("Exception", e);
         } finally {
             disconnect();
         }

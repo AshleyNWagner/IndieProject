@@ -30,7 +30,7 @@ public class User {
 
     private String email;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Story> stories = new HashSet<>();
 
     public User() {
@@ -152,11 +152,19 @@ public class User {
         this.email = email;
     }
 
+    /**
+     * Add a story to the list of user's stories.
+     * @param story the story to be added
+     */
     public void addStory(Story story) {
         stories.add(story);
         story.setUser(this);
     }
 
+    /**
+     * Remove a story from the list of user's stories.
+     * @param story the story to be removed
+     */
     public void removeStory(Story story) {
         stories.remove(story);
         story.setUser(null);
