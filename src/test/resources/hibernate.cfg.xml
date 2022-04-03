@@ -12,6 +12,6 @@
 
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.Story"/>
-        <mapping class="edu.matc.entity.StoryBranch"/>
+        <mapping class="edu.matc.entity.Branch"/>
     </session-factory>
 </hibernate-configuration>

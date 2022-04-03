@@ -428,21 +428,21 @@
 [DEBUG] 2022-03-23 10:38:30.314 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(stories), mappingColumn=user, insertable=true, updatable=true, unique=false}
 [DEBUG] 2022-03-23 10:38:30.316 [main] PropertyBinder - Building property user
 [TRACE] 2022-03-23 10:38:30.316 [main] PropertyBinder - Cascading user with none
-[DEBUG] 2022-03-23 10:38:30.316 [main] AnnotationBinder - Binding entity from annotated class: edu.matc.entity.StoryBranch
+[DEBUG] 2022-03-23 10:38:30.316 [main] AnnotationBinder - Binding entity from annotated class: edu.matc.entity.Branch
 [TRACE] 2022-03-23 10:38:30.316 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [DTYPE]
 [DEBUG] 2022-03-23 10:38:30.316 [main] Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
 [DEBUG] 2022-03-23 10:38:30.316 [main] EntityBinder - Import with entity name StoryBranch
-[TRACE] 2022-03-23 10:38:30.316 [main] InFlightMetadataCollectorImpl - Import: StoryBranch -> edu.matc.entity.StoryBranch
-[TRACE] 2022-03-23 10:38:30.316 [main] InFlightMetadataCollectorImpl - Import: edu.matc.entity.StoryBranch -> edu.matc.entity.StoryBranch
+[TRACE] 2022-03-23 10:38:30.316 [main] InFlightMetadataCollectorImpl - Import: StoryBranch -> edu.matc.entity.Branch
+[TRACE] 2022-03-23 10:38:30.316 [main] InFlightMetadataCollectorImpl - Import: edu.matc.entity.Branch -> edu.matc.entity.Branch
 [TRACE] 2022-03-23 10:38:30.317 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [story_branches]
 [TRACE] 2022-03-23 10:38:30.317 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [story_branches]
-[DEBUG] 2022-03-23 10:38:30.317 [main] EntityBinder - Bind entity edu.matc.entity.StoryBranch on table story_branches
-[TRACE] 2022-03-23 10:38:30.317 [main] AnnotationBinder - Processing annotations of edu.matc.entity.StoryBranch.id
+[DEBUG] 2022-03-23 10:38:30.317 [main] EntityBinder - Bind entity edu.matc.entity.Branch on table story_branches
+[TRACE] 2022-03-23 10:38:30.317 [main] AnnotationBinder - Processing annotations of edu.matc.entity.Branch.id
 [TRACE] 2022-03-23 10:38:30.318 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [id]
 [TRACE] 2022-03-23 10:38:30.318 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [id]
 [DEBUG] 2022-03-23 10:38:30.318 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(story_branches), mappingColumn=id, insertable=true, updatable=true, unique=false}
 [DEBUG] 2022-03-23 10:38:30.318 [main] PropertyBinder - MetadataSourceProcessor property id with lazy=false
-[DEBUG] 2022-03-23 10:38:30.318 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.StoryBranch:id]
+[DEBUG] 2022-03-23 10:38:30.318 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.Branch:id]
 [DEBUG] 2022-03-23 10:38:30.318 [main] SimpleValueBinder - building SimpleValue for id
 [TRACE] 2022-03-23 10:38:30.318 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [id]
 [TRACE] 2022-03-23 10:38:30.318 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [id]
@@ -452,52 +452,52 @@
 [TRACE] 2022-03-23 10:38:30.319 [main] AnnotationBinder - Add generic generator with name: native
 [DEBUG] 2022-03-23 10:38:30.319 [main] BinderHelper - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, native, ...)
 [TRACE] 2022-03-23 10:38:30.319 [main] AnnotationBinder - Bind @Id on id
-[TRACE] 2022-03-23 10:38:30.319 [main] AnnotationBinder - Processing annotations of edu.matc.entity.StoryBranch.branchDescription
+[TRACE] 2022-03-23 10:38:30.319 [main] AnnotationBinder - Processing annotations of edu.matc.entity.Branch.branchDescription
 [TRACE] 2022-03-23 10:38:30.319 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [branch_description]
 [TRACE] 2022-03-23 10:38:30.319 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [branch_description]
 [DEBUG] 2022-03-23 10:38:30.319 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(story_branches), mappingColumn=branch_description, insertable=true, updatable=true, unique=false}
 [DEBUG] 2022-03-23 10:38:30.319 [main] PropertyBinder - MetadataSourceProcessor property branchDescription with lazy=false
-[DEBUG] 2022-03-23 10:38:30.319 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.StoryBranch:branchDescription]
+[DEBUG] 2022-03-23 10:38:30.319 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.Branch:branchDescription]
 [DEBUG] 2022-03-23 10:38:30.319 [main] SimpleValueBinder - building SimpleValue for branchDescription
 [TRACE] 2022-03-23 10:38:30.319 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [branch_description]
 [DEBUG] 2022-03-23 10:38:30.319 [main] PropertyBinder - Building property branchDescription
 [TRACE] 2022-03-23 10:38:30.319 [main] PropertyBinder - Cascading branchDescription with null
-[TRACE] 2022-03-23 10:38:30.320 [main] AnnotationBinder - Processing annotations of edu.matc.entity.StoryBranch.branchText
+[TRACE] 2022-03-23 10:38:30.320 [main] AnnotationBinder - Processing annotations of edu.matc.entity.Branch.branchText
 [TRACE] 2022-03-23 10:38:30.320 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [branch_text]
 [TRACE] 2022-03-23 10:38:30.320 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [branch_text]
 [DEBUG] 2022-03-23 10:38:30.320 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(story_branches), mappingColumn=branch_text, insertable=true, updatable=true, unique=false}
 [DEBUG] 2022-03-23 10:38:30.320 [main] PropertyBinder - MetadataSourceProcessor property branchText with lazy=false
-[DEBUG] 2022-03-23 10:38:30.320 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.StoryBranch:branchText]
+[DEBUG] 2022-03-23 10:38:30.320 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.Branch:branchText]
 [DEBUG] 2022-03-23 10:38:30.320 [main] SimpleValueBinder - building SimpleValue for branchText
 [TRACE] 2022-03-23 10:38:30.320 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [branch_text]
 [DEBUG] 2022-03-23 10:38:30.320 [main] PropertyBinder - Building property branchText
 [TRACE] 2022-03-23 10:38:30.320 [main] PropertyBinder - Cascading branchText with null
-[TRACE] 2022-03-23 10:38:30.320 [main] AnnotationBinder - Processing annotations of edu.matc.entity.StoryBranch.choice1
+[TRACE] 2022-03-23 10:38:30.320 [main] AnnotationBinder - Processing annotations of edu.matc.entity.Branch.choice1
 [TRACE] 2022-03-23 10:38:30.320 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [choice_one]
 [TRACE] 2022-03-23 10:38:30.320 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [choice_one]
 [DEBUG] 2022-03-23 10:38:30.320 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(story_branches), mappingColumn=choice_one, insertable=true, updatable=true, unique=false}
 [DEBUG] 2022-03-23 10:38:30.321 [main] PropertyBinder - MetadataSourceProcessor property choice1 with lazy=false
-[DEBUG] 2022-03-23 10:38:30.321 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.StoryBranch:choice1]
+[DEBUG] 2022-03-23 10:38:30.321 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.Branch:choice1]
 [DEBUG] 2022-03-23 10:38:30.321 [main] SimpleValueBinder - building SimpleValue for choice1
 [TRACE] 2022-03-23 10:38:30.321 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [choice_one]
 [DEBUG] 2022-03-23 10:38:30.321 [main] PropertyBinder - Building property choice1
 [TRACE] 2022-03-23 10:38:30.321 [main] PropertyBinder - Cascading choice1 with null
-[TRACE] 2022-03-23 10:38:30.321 [main] AnnotationBinder - Processing annotations of edu.matc.entity.StoryBranch.choice2
+[TRACE] 2022-03-23 10:38:30.321 [main] AnnotationBinder - Processing annotations of edu.matc.entity.Branch.choice2
 [TRACE] 2022-03-23 10:38:30.321 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [choice_two]
 [TRACE] 2022-03-23 10:38:30.321 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [choice_two]
 [DEBUG] 2022-03-23 10:38:30.322 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(story_branches), mappingColumn=choice_two, insertable=true, updatable=true, unique=false}
 [DEBUG] 2022-03-23 10:38:30.322 [main] PropertyBinder - MetadataSourceProcessor property choice2 with lazy=false
-[DEBUG] 2022-03-23 10:38:30.322 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.StoryBranch:choice2]
+[DEBUG] 2022-03-23 10:38:30.322 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.Branch:choice2]
 [DEBUG] 2022-03-23 10:38:30.322 [main] SimpleValueBinder - building SimpleValue for choice2
 [TRACE] 2022-03-23 10:38:30.322 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [choice_two]
 [DEBUG] 2022-03-23 10:38:30.322 [main] PropertyBinder - Building property choice2
 [TRACE] 2022-03-23 10:38:30.322 [main] PropertyBinder - Cascading choice2 with null
-[TRACE] 2022-03-23 10:38:30.322 [main] AnnotationBinder - Processing annotations of edu.matc.entity.StoryBranch.storyId
+[TRACE] 2022-03-23 10:38:30.322 [main] AnnotationBinder - Processing annotations of edu.matc.entity.Branch.storyId
 [TRACE] 2022-03-23 10:38:30.322 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [story_id]
 [TRACE] 2022-03-23 10:38:30.322 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [story_id]
 [DEBUG] 2022-03-23 10:38:30.322 [main] Ejb3Column - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(story_branches), mappingColumn=story_id, insertable=true, updatable=true, unique=false}
 [DEBUG] 2022-03-23 10:38:30.323 [main] PropertyBinder - MetadataSourceProcessor property storyId with lazy=false
-[DEBUG] 2022-03-23 10:38:30.323 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.StoryBranch:storyId]
+[DEBUG] 2022-03-23 10:38:30.323 [main] AbstractPropertyHolder - Attempting to locate auto-apply AttributeConverter for property [edu.matc.entity.Branch:storyId]
 [DEBUG] 2022-03-23 10:38:30.323 [main] SimpleValueBinder - building SimpleValue for storyId
 [TRACE] 2022-03-23 10:38:30.323 [main] NormalizingIdentifierHelperImpl - Normalizing identifier quoting [story_id]
 [DEBUG] 2022-03-23 10:38:30.323 [main] PropertyBinder - Building property storyId
@@ -619,10 +619,10 @@
 [TRACE] 2022-03-23 10:38:31.346 [main] AbstractPropertyMapping - Skipping duplicate registration of path [user.id], existing type = [org.hibernate.type.IntegerType@1aad0b1], incoming type = [org.hibernate.type.IntegerType@1aad0b1]
 [TRACE] 2022-03-23 10:38:31.346 [main] AbstractPropertyMapping - Skipping duplicate registration of path [user.id], existing type = [org.hibernate.type.IntegerType@1aad0b1], incoming type = [org.hibernate.type.IntegerType@1aad0b1]
 [TRACE] 2022-03-23 10:38:31.346 [main] AbstractPropertyMapping - Skipping duplicate registration of path [id], existing type = [org.hibernate.type.IntegerType@1aad0b1], incoming type = [org.hibernate.type.IntegerType@1aad0b1]
-[DEBUG] 2022-03-23 10:38:31.346 [main] ClassLoaderAccessImpl - Not known whether passed class name [edu.matc.entity.StoryBranch] is safe
-[DEBUG] 2022-03-23 10:38:31.346 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : edu.matc.entity.StoryBranch
-[DEBUG] 2022-03-23 10:38:31.347 [main] ClassLoaderAccessImpl - Not known whether passed class name [edu.matc.entity.StoryBranch] is safe
-[DEBUG] 2022-03-23 10:38:31.347 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : edu.matc.entity.StoryBranch
+[DEBUG] 2022-03-23 10:38:31.346 [main] ClassLoaderAccessImpl - Not known whether passed class name [edu.matc.entity.Branch] is safe
+[DEBUG] 2022-03-23 10:38:31.346 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : edu.matc.entity.Branch
+[DEBUG] 2022-03-23 10:38:31.347 [main] ClassLoaderAccessImpl - Not known whether passed class name [edu.matc.entity.Branch] is safe
+[DEBUG] 2022-03-23 10:38:31.347 [main] ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : edu.matc.entity.Branch
 [TRACE] 2022-03-23 10:38:31.368 [main] AbstractPropertyMapping - Skipping duplicate registration of path [branchDescription], existing type = [org.hibernate.type.StringType@5dd903be], incoming type = [org.hibernate.type.StringType@5dd903be]
 [TRACE] 2022-03-23 10:38:31.368 [main] AbstractPropertyMapping - Skipping duplicate registration of path [branchText], existing type = [org.hibernate.type.StringType@5dd903be], incoming type = [org.hibernate.type.StringType@5dd903be]
 [TRACE] 2022-03-23 10:38:31.368 [main] AbstractPropertyMapping - Skipping duplicate registration of path [choice1], existing type = [org.hibernate.type.StringType@5dd903be], incoming type = [org.hibernate.type.StringType@5dd903be]
@@ -914,18 +914,18 @@
 [DEBUG] 2022-03-23 10:38:31.565 [main] EntityLoader - Static select for entity edu.matc.entity.Story [READ]: select story0_.id as id1_0_0_, story0_.date_created as date_cre2_0_0_, story0_.description as descript3_0_0_, story0_.title as title4_0_0_, story0_.user_id as user_id5_0_0_, user1_.id as id1_2_1_, user1_.email as email2_2_1_, user1_.first_name as first_na3_2_1_, user1_.last_name as last_nam4_2_1_, user1_.password as password5_2_1_, user1_.user_name as user_nam6_2_1_ from stories story0_ left outer join users user1_ on story0_.user_id=user1_.id where story0_.id=?
 [DEBUG] 2022-03-23 10:38:31.566 [main] Loader - Static select for action ACTION_MERGE on entity edu.matc.entity.Story: select story0_.id as id1_0_0_, story0_.date_created as date_cre2_0_0_, story0_.description as descript3_0_0_, story0_.title as title4_0_0_, story0_.user_id as user_id5_0_0_ from stories story0_ where story0_.id=?
 [DEBUG] 2022-03-23 10:38:31.566 [main] Loader - Static select for action ACTION_REFRESH on entity edu.matc.entity.Story: select story0_.id as id1_0_0_, story0_.date_created as date_cre2_0_0_, story0_.description as descript3_0_0_, story0_.title as title4_0_0_, story0_.user_id as user_id5_0_0_ from stories story0_ where story0_.id=?
-[DEBUG] 2022-03-23 10:38:31.566 [main] AbstractEntityPersister - Static SQL for entity: edu.matc.entity.StoryBranch
+[DEBUG] 2022-03-23 10:38:31.566 [main] AbstractEntityPersister - Static SQL for entity: edu.matc.entity.Branch
 [DEBUG] 2022-03-23 10:38:31.566 [main] AbstractEntityPersister -  Version select: select id from story_branches where id =?
 [DEBUG] 2022-03-23 10:38:31.566 [main] AbstractEntityPersister -  Snapshot select: select storybranc_.id, storybranc_.branch_description as branch_d2_1_, storybranc_.branch_text as branch_t3_1_, storybranc_.choice_one as choice_o4_1_, storybranc_.choice_two as choice_t5_1_, storybranc_.story_id as story_id6_1_ from story_branches storybranc_ where storybranc_.id=?
 [DEBUG] 2022-03-23 10:38:31.566 [main] AbstractEntityPersister -  Insert 0: insert into story_branches (branch_description, branch_text, choice_one, choice_two, story_id, id) values (?, ?, ?, ?, ?, ?)
 [DEBUG] 2022-03-23 10:38:31.567 [main] AbstractEntityPersister -  Update 0: update story_branches set branch_description=?, branch_text=?, choice_one=?, choice_two=?, story_id=? where id=?
 [DEBUG] 2022-03-23 10:38:31.567 [main] AbstractEntityPersister -  Delete 0: delete from story_branches where id=?
 [DEBUG] 2022-03-23 10:38:31.567 [main] AbstractEntityPersister -  Identity insert: insert into story_branches (branch_description, branch_text, choice_one, choice_two, story_id) values (?, ?, ?, ?, ?)
-[TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Starting root entity : edu.matc.entity.StoryBranch
+[TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Starting root entity : edu.matc.entity.Branch
 [DEBUG] 2022-03-23 10:38:31.567 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5b14f482]
 [TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@19705650
 [TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - .. Registering AssociationKey : AssociationKey(table=story_branches, columns={id}) -> org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@19705650
-[TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting entity identifier : edu.matc.entity.StoryBranch
+[TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting entity identifier : edu.matc.entity.Branch
 [DEBUG] 2022-03-23 10:38:31.567 [main] MetamodelGraphWalker - Visiting attribute path : branchDescription
 [TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting attribute Attribute(name=branchDescription, type=string [non-identifier])
 [TRACE] 2022-03-23 10:38:31.567 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - << Finishing up attribute : Attribute(name=branchDescription, type=string [non-identifier])
@@ -942,24 +942,24 @@
 [TRACE] 2022-03-23 10:38:31.568 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting attribute Attribute(name=storyId, type=integer [non-identifier])
 [TRACE] 2022-03-23 10:38:31.568 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - << Finishing up attribute : Attribute(name=storyId, type=integer [non-identifier])
 [TRACE] 2022-03-23 10:38:31.568 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@19705650
-[TRACE] 2022-03-23 10:38:31.568 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Finished root entity : edu.matc.entity.StoryBranch
+[TRACE] 2022-03-23 10:38:31.568 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Finished root entity : edu.matc.entity.Branch
 [DEBUG] 2022-03-23 10:38:31.568 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
 [DEBUG] 2022-03-23 10:38:31.568 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2022-03-23 10:38:31.569 [main] LoadPlanTreePrinter - LoadPlan(entity=edu.matc.entity.StoryBranch)
+[DEBUG] 2022-03-23 10:38:31.569 [main] LoadPlanTreePrinter - LoadPlan(entity=edu.matc.entity.Branch)
     - Returns
-       - EntityReturnImpl(entity=edu.matc.entity.StoryBranch, querySpaceUid=<gen:0>, path=edu.matc.entity.StoryBranch)
+       - EntityReturnImpl(entity=edu.matc.entity.Branch, querySpaceUid=<gen:0>, path=edu.matc.entity.Branch)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=edu.matc.entity.StoryBranch)
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=edu.matc.entity.Branch)
           - SQL table alias mapping - storybranc0_
           - alias suffix - 0_
           - suffixed key columns - {id1_1_0_}
 
-[DEBUG] 2022-03-23 10:38:31.569 [main] EntityLoader - Static select for entity edu.matc.entity.StoryBranch [NONE]: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
-[TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Starting root entity : edu.matc.entity.StoryBranch
+[DEBUG] 2022-03-23 10:38:31.569 [main] EntityLoader - Static select for entity edu.matc.entity.Branch [NONE]: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
+[TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Starting root entity : edu.matc.entity.Branch
 [DEBUG] 2022-03-23 10:38:31.569 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1a785fd5]
 [TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4a660b34
 [TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - .. Registering AssociationKey : AssociationKey(table=story_branches, columns={id}) -> org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4a660b34
-[TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting entity identifier : edu.matc.entity.StoryBranch
+[TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting entity identifier : edu.matc.entity.Branch
 [DEBUG] 2022-03-23 10:38:31.569 [main] MetamodelGraphWalker - Visiting attribute path : branchDescription
 [TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting attribute Attribute(name=branchDescription, type=string [non-identifier])
 [TRACE] 2022-03-23 10:38:31.569 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - << Finishing up attribute : Attribute(name=branchDescription, type=string [non-identifier])
@@ -976,21 +976,21 @@
 [TRACE] 2022-03-23 10:38:31.570 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - >> Starting attribute Attribute(name=storyId, type=integer [non-identifier])
 [TRACE] 2022-03-23 10:38:31.570 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - << Finishing up attribute : Attribute(name=storyId, type=integer [non-identifier])
 [TRACE] 2022-03-23 10:38:31.570 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@4a660b34
-[TRACE] 2022-03-23 10:38:31.570 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Finished root entity : edu.matc.entity.StoryBranch
+[TRACE] 2022-03-23 10:38:31.570 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Finished root entity : edu.matc.entity.Branch
 [DEBUG] 2022-03-23 10:38:31.570 [main] FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
 [DEBUG] 2022-03-23 10:38:31.570 [main] LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-[DEBUG] 2022-03-23 10:38:31.571 [main] LoadPlanTreePrinter - LoadPlan(entity=edu.matc.entity.StoryBranch)
+[DEBUG] 2022-03-23 10:38:31.571 [main] LoadPlanTreePrinter - LoadPlan(entity=edu.matc.entity.Branch)
     - Returns
-       - EntityReturnImpl(entity=edu.matc.entity.StoryBranch, querySpaceUid=<gen:0>, path=edu.matc.entity.StoryBranch)
+       - EntityReturnImpl(entity=edu.matc.entity.Branch, querySpaceUid=<gen:0>, path=edu.matc.entity.Branch)
     - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=edu.matc.entity.StoryBranch)
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=edu.matc.entity.Branch)
           - SQL table alias mapping - storybranc0_
           - alias suffix - 0_
           - suffixed key columns - {id1_1_0_}
 
-[DEBUG] 2022-03-23 10:38:31.571 [main] EntityLoader - Static select for entity edu.matc.entity.StoryBranch [READ]: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
-[DEBUG] 2022-03-23 10:38:31.571 [main] Loader - Static select for action ACTION_MERGE on entity edu.matc.entity.StoryBranch: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
-[DEBUG] 2022-03-23 10:38:31.571 [main] Loader - Static select for action ACTION_REFRESH on entity edu.matc.entity.StoryBranch: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
+[DEBUG] 2022-03-23 10:38:31.571 [main] EntityLoader - Static select for entity edu.matc.entity.Branch [READ]: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
+[DEBUG] 2022-03-23 10:38:31.571 [main] Loader - Static select for action ACTION_MERGE on entity edu.matc.entity.Branch: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
+[DEBUG] 2022-03-23 10:38:31.571 [main] Loader - Static select for action ACTION_REFRESH on entity edu.matc.entity.Branch: select storybranc0_.id as id1_1_0_, storybranc0_.branch_description as branch_d2_1_0_, storybranc0_.branch_text as branch_t3_1_0_, storybranc0_.choice_one as choice_o4_1_0_, storybranc0_.choice_two as choice_t5_1_0_, storybranc0_.story_id as story_id6_1_0_ from story_branches storybranc0_ where storybranc0_.id=?
 [TRACE] 2022-03-23 10:38:31.580 [main] AbstractLoadPlanBuildingAssociationVisitationStrategy -  Starting root collection : edu.matc.entity.User.stories
 [DEBUG] 2022-03-23 10:38:31.581 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@63485d7]
 [DEBUG] 2022-03-23 10:38:31.582 [main] QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@23ea8830]
@@ -1087,32 +1087,32 @@
 [TRACE] 2022-03-23 10:38:31.629 [main] AttributeFactory -     Determined member [private edu.matc.entity.User edu.matc.entity.Story.user]
 [TRACE] 2022-03-23 10:38:31.629 [main] AttributeFactory -     Determined type [name=edu.matc.entity.User, class=org.hibernate.type.ManyToOneType]
 [TRACE] 2022-03-23 10:38:31.629 [main] MetadataContext - Completed entity [edu.matc.entity.Story]
-[TRACE] 2022-03-23 10:38:31.629 [main] MetadataContext - Starting entity [edu.matc.entity.StoryBranch]
+[TRACE] 2022-03-23 10:38:31.629 [main] MetadataContext - Starting entity [edu.matc.entity.Branch]
 [TRACE] 2022-03-23 10:38:31.629 [main] AttributeFactory - Building identifier attribute [StoryBranch.id]
 [TRACE] 2022-03-23 10:38:31.629 [main] AttributeFactory - Starting attribute metadata determination [id]
-[TRACE] 2022-03-23 10:38:31.629 [main] AttributeFactory -     Determined member [private int edu.matc.entity.StoryBranch.id]
+[TRACE] 2022-03-23 10:38:31.629 [main] AttributeFactory -     Determined member [private int edu.matc.entity.Branch.id]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined type [name=integer, class=org.hibernate.type.IntegerType]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Building attribute [StoryBranch.branchDescription]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Starting attribute metadata determination [branchDescription]
-[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.StoryBranch.branchDescription]
+[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.Branch.branchDescription]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined type [name=string, class=org.hibernate.type.StringType]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Building attribute [StoryBranch.branchText]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Starting attribute metadata determination [branchText]
-[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.StoryBranch.branchText]
+[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.Branch.branchText]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined type [name=string, class=org.hibernate.type.StringType]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Building attribute [StoryBranch.choice1]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Starting attribute metadata determination [choice1]
-[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.StoryBranch.choice1]
+[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.Branch.choice1]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined type [name=string, class=org.hibernate.type.StringType]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Building attribute [StoryBranch.choice2]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Starting attribute metadata determination [choice2]
-[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.StoryBranch.choice2]
+[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private java.lang.String edu.matc.entity.Branch.choice2]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined type [name=string, class=org.hibernate.type.StringType]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Building attribute [StoryBranch.storyId]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory - Starting attribute metadata determination [storyId]
-[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private int edu.matc.entity.StoryBranch.storyId]
+[TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined member [private int edu.matc.entity.Branch.storyId]
 [TRACE] 2022-03-23 10:38:31.630 [main] AttributeFactory -     Determined type [name=integer, class=org.hibernate.type.IntegerType]
-[TRACE] 2022-03-23 10:38:31.630 [main] MetadataContext - Completed entity [edu.matc.entity.StoryBranch]
+[TRACE] 2022-03-23 10:38:31.630 [main] MetadataContext - Completed entity [edu.matc.entity.Branch]
 [DEBUG] 2022-03-23 10:38:31.641 [main] SchemaManagementToolCoordinator - No actions specified; doing nothing
 [TRACE] 2022-03-23 10:38:31.641 [main] AbstractServiceRegistryImpl - Initializing service [role=org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform]
 [DEBUG] 2022-03-23 10:38:31.641 [main] JtaPlatformInitiator - No JtaPlatform was specified, checking resolver

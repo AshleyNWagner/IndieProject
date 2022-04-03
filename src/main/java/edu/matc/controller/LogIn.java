@@ -63,5 +63,7 @@ public class LogIn extends HttpServlet implements PropertiesLoader {
         // TODO if properties weren't loaded properly, route to an error page
         String url = LOGIN_URL + "?response_type=code&client_id=" + CLIENT_ID + "&redirect_uri=" + REDIRECT_URL;
         resp.sendRedirect(url);
+
+        // TODO store user somewhere so id can be put in story table
     }
 }
