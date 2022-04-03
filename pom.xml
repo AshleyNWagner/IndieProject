@@ -97,7 +97,7 @@
       <version>5.4.4.Final</version>
     </dependency>
 
-    <!-- Next 3 Dependencies for Cogntio-->
+    <!-- Next 3 Dependencies for Cognito-->
     <!-- for parsing access token -->
     <dependency>
       <groupId>com.auth0</groupId>

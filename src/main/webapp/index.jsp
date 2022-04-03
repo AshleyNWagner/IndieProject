@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<%@include file="head.jsp"%>
+<%@include file="includes/head.jsp"%>
 <body>
-<%@include file="navigation.jsp"%>
+<%@include file="includes/navigation.jsp"%>
 
-<%@include file="bootstrap.jsp"%>
+<%@include file="includes/bootstrap.jsp"%>
 </body>
 </html>
 

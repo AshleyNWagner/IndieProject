@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<%@include file="head.jsp"%>
+<%@include file="includes/head.jsp"%>
 <body>
-<%@include file="navigation.jsp"%>
+<%@include file="includes/navigation.jsp"%>
 
     <main>
         <form style="width:30%; margin: 1em auto" action="addUser" method="post">
@@ -36,6 +36,6 @@
     </main>
 
 
-<%@include file="bootstrap.jsp"%>
+<%@include file="includes/bootstrap.jsp"%>
 </body>
 </html>

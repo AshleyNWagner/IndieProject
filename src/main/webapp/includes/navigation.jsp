@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="index.jsp">Home
+                    <a class="nav-link active" href="../index.jsp">Home
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
@@ -31,7 +31,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="signUp.jsp">Sign Up</a>
+                    <a class="nav-link" href="../signUp.jsp">Sign Up</a>
                 </li>
 
             </ul>

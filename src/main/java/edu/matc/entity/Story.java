@@ -1,7 +1,5 @@
 package edu.matc.entity;
 
-//TODO add constructors
-
 import org.hibernate.annotations.GenericGenerator;
 import java.time.*;
 import java.util.*;
@@ -29,9 +27,10 @@ public class Story {
     @Column(name = "date_created")
     private LocalDate dateCreated;
 
-    // TODO figure out what you're doing for these things
-    // Set<String> tags = HashSet<>();
-    // SomeType image = something
+    @OneToMany(mappedBy = "story", fetch = FetchType.EAGER)
+    private Set<StoryTag> tags = new HashSet<>();
+
+    // TODO decide if you're including images
 
     /**
      * Instantiates a new Story.

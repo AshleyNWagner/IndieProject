@@ -33,3 +33,7 @@
 [DEBUG] 2022-03-23 10:45:05.875 [http-nio-8080-exec-13] Auth - here are all the available claims: {at_hash=com.auth0.jwt.impl.JsonNodeClaim@42fd9c68, sub=com.auth0.jwt.impl.JsonNodeClaim@12804b34, email_verified=com.auth0.jwt.impl.JsonNodeClaim@55319d2b, iss=com.auth0.jwt.impl.JsonNodeClaim@22b8c7bb, cognito:username=com.auth0.jwt.impl.JsonNodeClaim@c081158, given_name=com.auth0.jwt.impl.JsonNodeClaim@1c412206, origin_jti=com.auth0.jwt.impl.JsonNodeClaim@45c02c60, aud=com.auth0.jwt.impl.JsonNodeClaim@2121ae7c, event_id=com.auth0.jwt.impl.JsonNodeClaim@6defe9d1, token_use=com.auth0.jwt.impl.JsonNodeClaim@782bb778, auth_time=com.auth0.jwt.impl.JsonNodeClaim@3c4c3731, exp=com.auth0.jwt.impl.JsonNodeClaim@10b23c8a, iat=com.auth0.jwt.impl.JsonNodeClaim@281fe2c, family_name=com.auth0.jwt.impl.JsonNodeClaim@27340973, jti=com.auth0.jwt.impl.JsonNodeClaim@7a1c571b, email=com.auth0.jwt.impl.JsonNodeClaim@7bcb62be}
 [DEBUG] 2022-03-23 17:14:30.126 [main] GenericDao - Searching for order with userName = anwagner
 [DEBUG] 2022-03-23 17:14:30.603 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-03 08:05:16.525 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-03 08:05:17.088 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-03 08:07:43.068 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-03 08:07:43.525 [main] GenericDao - Searching for entity with userName like er
