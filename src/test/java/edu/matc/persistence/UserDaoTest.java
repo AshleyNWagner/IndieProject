@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Story;
+import edu.matc.entity.Tag;
 import edu.matc.entity.User;
 
 import edu.matc.test.util.Database;
@@ -56,10 +57,17 @@ class UserDaoTest {
      */
     @Test
     void insertSuccess() {
-        User newUser = new User("Dennis", "Dennis", "DoubleDennis", "password5", "dennis@gmail.com");
+        User newUser = new User("Dennis", "Dennis", "DoubleDennis", "dennis@gmail.com");
         int newUserId = userDao.insert(newUser);
 
-        Story newStory = new Story("New Book", "This is a new story.", newUser);
+        Set<Tag> tags = new HashSet<>();
+        Tag tag1 = new Tag("Horror");
+        Tag tag2 = new Tag("Fantasy");
+
+        tags.add(tag1);
+        tags.add(tag2);
+
+        Story newStory = new Story("New Book", "This is a new story.", tags, newUser);
         int newStoryId = storyDao.insert(newStory);
 
         newUser.addStory(newStory);

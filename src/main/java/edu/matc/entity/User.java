@@ -26,8 +26,6 @@ public class User {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
-    private String password;
-
     private String email;
 
    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
@@ -36,11 +34,10 @@ public class User {
     public User() {
 
     }
-    public User(String firstName, String lastName, String userName, String password, String email) {
+    public User(String firstName, String lastName, String userName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
-        this.password = password;
         this.email = email;
     }
 
@@ -117,24 +114,6 @@ public class User {
     }
 
     /**
-     * Gets password.
-     *
-     * @return the password
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * Sets password.
-     *
-     * @param password the password
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
      * Gets email.
      *
      * @return the email
@@ -179,13 +158,12 @@ public class User {
                 Objects.equals(firstName, user.firstName) &&
                 Objects.equals(lastName, user.lastName) &&
                 Objects.equals(userName, user.userName) &&
-                Objects.equals(password, user.password) &&
                 Objects.equals(email, user.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, userName, id, password, email);
+        return Objects.hash(firstName, lastName, userName, id, email);
     }
 
     @Override
@@ -195,7 +173,6 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
                 ", id=" + id +
-                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", stories=" + stories +
                 '}';

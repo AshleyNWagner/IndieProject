@@ -9,9 +9,10 @@
         <property name="hibernate.c3p0.timeout">300</property>
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
-
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.Story"/>
         <mapping class="edu.matc.entity.Branch"/>
+        <mapping class="edu.matc.entity.Tag"/>
+        <mapping class="edu.matc.entity.StoryTag"/>
     </session-factory>
 </hibernate-configuration>

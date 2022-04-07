@@ -3,13 +3,14 @@ package edu.matc.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * The type Story tag.
  */
 @Entity(name = "StoryTag")
 @Table(name = "story_tags")
-public class StoryTag {
+public class StoryTag implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")

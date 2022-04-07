@@ -38,6 +38,13 @@ public class Story {
     public Story() {
 
     }
+    // TODO delete this one once user stuff is figured out
+    public Story(String title, String description, Set<Tag> tags) {
+        this.title = title;
+        this.description = description;
+        this.tags = tags;
+        setDateCreated(LocalDate.now());
+    }
 
     /**
      * Instantiates a new Story.
@@ -47,12 +54,12 @@ public class Story {
      * @param user        the user
      */
 // TODO add image?
-    public Story(String title, String description, User user) {
+    public Story(String title, String description,Set<Tag> tags, User user) {
         this.title = title;
         this.description = description;
         this.user = user;
+        this.tags = tags;
         setDateCreated(LocalDate.now());
-
     }
 
     /**

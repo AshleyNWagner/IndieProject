@@ -7,6 +7,8 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.matc.auth.*;
+import edu.matc.entity.User;
+import edu.matc.persistence.GenericDao;
 import edu.matc.utilities.PropertiesLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -83,8 +85,11 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                userName = validate(tokenResponse);
-                req.setAttribute("userName", userName);
+                User user = validate(tokenResponse);
+                req.setAttribute("userName", user.getUserName());
+                req.setAttribute("firstName", user.getFirstName());
+                req.setAttribute("lastName", user.getLastName());
+                req.setAttribute("email", user.getEmail());
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
                 //TODO forward to an error page
@@ -130,7 +135,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * @return
      * @throws IOException
      */
-    private String validate(TokenResponse tokenResponse) throws IOException {
+    private User validate(TokenResponse tokenResponse) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         CognitoTokenHeader tokenHeader = mapper.readValue(CognitoJWTParser.getHeader(tokenResponse.getIdToken()).toString(), CognitoTokenHeader.class);
 
@@ -169,14 +174,25 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
         String userName = jwt.getClaim("cognito:username").asString();
+        String firstName = jwt.getClaim("cognito:given_name").asString();
+        String lastName = jwt.getClaim("cognito:family_name").asString();
+        String email = jwt.getClaim("cognito:email").asString();
+
+        User user = new User(firstName, lastName, userName, email);
         logger.debug("here's the username: " + userName);
 
+
+
         logger.debug("here are all the available claims: " + jwt.getClaims());
+//        GenericDao userDao = new GenericDao(User.class);
+//        if (!userDao.getByPropertyEqual("userName", userName).isEmpty()) {
+//            User newUser = new User()
+//        }
 
         // TODO decide what you want to do with the info!
         // for now, I'm just returning username for display back to the browser
 
-        return userName;
+        return user;
     }
 
     /** Create the auth url and use it to build the request.

@@ -28,7 +28,6 @@ public class AddUser extends HttpServlet {
         User user = new User(request.getParameter("firstName"),
                 request.getParameter("lastName"),
                 request.getParameter("userName"),
-                request.getParameter("password"),
                 request.getParameter("email"));
 
         id = userDao.insert(user);

@@ -1,2 +1,2 @@
 delete from users;
-INSERT INTO `users` VALUES (1,'Ashley','Wagner','anwagner','password1','anwagner@madisoncollege.edu'),(2,'Herbert','Sherbert','herbsherb','password2','herbsherb@gmail.com'),(3,'Pat','Travis','patravis','password3','patravis@yahoo.com'),(4,'Merry','Berry','MerryBerry','password4','merry_berry@gmail.com');
+INSERT INTO `users` VALUES (1,'Ashley','Wagner','anwagner','anwagner@madisoncollege.edu'),(2,'Herbert','Sherbert','herbsherb','herbsherb@gmail.com'),(3,'Pat','Travis','patravis','patravis@yahoo.com'),(4,'Merry','Berry','MerryBerry','merry_berry@gmail.com');
