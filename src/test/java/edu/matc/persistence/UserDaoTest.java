@@ -67,7 +67,7 @@ class UserDaoTest {
         tags.add(tag1);
         tags.add(tag2);
 
-        Story newStory = new Story("New Book", "This is a new story.", tags, newUser);
+        Story newStory = new Story("New Book", "This is a new story.", newUser);
         int newStoryId = storyDao.insert(newStory);
 
         newUser.addStory(newStory);

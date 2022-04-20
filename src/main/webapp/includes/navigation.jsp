@@ -23,7 +23,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Write</a>
+                    <a class="nav-link" href="createStory.jsp">Write</a>
                 </li>
 
                 <li class="nav-item">
@@ -31,7 +31,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../signUp.jsp">Sign Up</a>
+                    <a class="nav-link" href="signUp.jsp">Sign Up</a>
                 </li>
 
             </ul>

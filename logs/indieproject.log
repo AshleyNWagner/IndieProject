@@ -1572,3 +1572,17 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 [DEBUG] 2022-04-06 10:04:32.686 [main] GenericDao - Searching for entity with userName like er
 [DEBUG] 2022-04-06 10:08:37.195 [main] GenericDao - Searching for order with userName = anwagner
 [DEBUG] 2022-04-06 10:08:37.623 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-15 05:52:02.232 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-15 05:52:02.724 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-15 06:32:42.189 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-15 06:32:42.768 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-15 06:34:17.921 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-15 06:34:18.376 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-17 13:40:30.195 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-17 13:40:30.684 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-17 13:47:59.714 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-17 13:48:00.216 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-17 14:01:00.105 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-17 14:01:00.567 [main] GenericDao - Searching for entity with userName like er
+[DEBUG] 2022-04-17 14:40:01.400 [main] GenericDao - Searching for order with userName = anwagner
+[DEBUG] 2022-04-17 14:40:01.985 [main] GenericDao - Searching for entity with userName like er

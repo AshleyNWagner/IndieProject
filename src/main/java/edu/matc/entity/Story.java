@@ -38,13 +38,6 @@ public class Story {
     public Story() {
 
     }
-    // TODO delete this one once user stuff is figured out
-    public Story(String title, String description, Set<Tag> tags) {
-        this.title = title;
-        this.description = description;
-        this.tags = tags;
-        setDateCreated(LocalDate.now());
-    }
 
     /**
      * Instantiates a new Story.
@@ -54,11 +47,11 @@ public class Story {
      * @param user        the user
      */
 // TODO add image?
-    public Story(String title, String description,Set<Tag> tags, User user) {
+    // TODO figure out user stuff
+    public Story(String title, String description, User user) {
         this.title = title;
         this.description = description;
         this.user = user;
-        this.tags = tags;
         setDateCreated(LocalDate.now());
     }
 
@@ -150,6 +143,20 @@ public class Story {
      */
     public void setDateCreated(LocalDate dateCreated) {
         this.dateCreated = dateCreated;
+    }
+
+    public Set<StoryTag> getTags() {
+        return tags;
+    }
+
+    public void setTags(Set<StoryTag> tags) {
+        this.tags = tags;
+    }
+
+    public void addTag(Tag tag) {
+        StoryTag storyTag = new StoryTag(this, tag);
+        tags.add(storyTag);
+        tag.getStories().add(storyTag);
     }
 
     @Override
