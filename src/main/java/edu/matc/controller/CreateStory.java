@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.ws.rs.core.Request;
 import java.io.IOException;
 import java.util.*;
@@ -50,7 +51,11 @@ public class CreateStory extends HttpServlet {
 
         int storyId = storyDao.insert(story);
 
-      // TODO store user info in login servlet
+        HttpSession session = request.getSession();
+        session.setAttribute("currentStory", storyDao.getById(storyId));
+
+      // TODO store user info in login servlet and use instead of placeholder
+      // TODO Add page in between that asks if continuing or creating new, link in nav
         RequestDispatcher dispatcher = request.getRequestDispatcher("/addBranch.jsp");
         dispatcher.forward(request, response);
 

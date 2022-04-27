@@ -12,9 +12,6 @@ import java.util.Objects;
 @Table(name = "branches")
 public class Branch {
 
-    @Column(name = "story_id")
-    private int storyId;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
@@ -26,11 +23,12 @@ public class Branch {
     @Column(name = "branch_description")
     private String branchDescription;
 
-    @Column(name = "choice_one")
-    private String choice1;
+    @Column(name = "choice_ids")
+    private String choiceIds;
 
-    @Column(name = "choice_two")
-    private String choice2;
+    @ManyToOne
+    private Story story;
+
 
     /**
      * Instantiates a new Story branch.
@@ -39,40 +37,21 @@ public class Branch {
 
     }
 
+
     /**
-     * Instantiates a new Story branch.
+     * Instantiates a new Branch.
      *
-     * @param storyId           the story id
      * @param branchText        the branch text
      * @param branchDescription the branch description
-     * @param choice1           the choice 1
-     * @param choice2           the choice 2
+     * @param story             the story
      */
-    public Branch(int storyId, String branchText, String branchDescription, String choice1, String choice2) {
-        this.storyId = storyId;
+    public Branch(String branchText, String branchDescription, Story story) {
+
         this.branchText = branchText;
         this.branchDescription = branchDescription;
-        this.choice1 = choice1;
-        this.choice2 = choice2;
+        this.story = story;
     }
 
-    /**
-     * Gets story id.
-     *
-     * @return the story id
-     */
-    public int getStoryId() {
-        return storyId;
-    }
-
-    /**
-     * Sets story id.
-     *
-     * @param storyId the story id
-     */
-    public void setStoryId(int storyId) {
-        this.storyId = storyId;
-    }
 
     /**
      * Gets id.
@@ -129,67 +108,70 @@ public class Branch {
     }
 
     /**
-     * Gets choice 1.
+     * Gets choice ids.
      *
-     * @return the choice 1
+     * @return the choice ids
      */
-    public String getChoice1() {
-        return choice1;
+    public String getChoiceIds() {
+        return choiceIds;
     }
 
     /**
-     * Sets choice 1.
+     * Sets choice ids.
      *
-     * @param choice1 the choice 1
+     * @param choiceIds the choice ids
      */
-    public void setChoice1(String choice1) {
-        this.choice1 = choice1;
+    public void setChoiceIds(String choiceIds) {
+        this.choiceIds = choiceIds;
     }
 
     /**
-     * Gets choice 2.
+     * Gets story.
      *
-     * @return the choice 2
+     * @return the story
      */
-    public String getChoice2() {
-        return choice2;
+    public Story getStory() {
+        return story;
     }
 
     /**
-     * Sets choice 2.
+     * Sets story.
      *
-     * @param choice2 the choice 2
+     * @param story the story
      */
-    public void setChoice2(String choice2) {
-        this.choice2 = choice2;
+    public void setStory(Story story) {
+        this.story = story;
+    }
+
+    public void addChoiceId(String choiceId) {
+        choiceIds += "&" + choiceId;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Branch that = (Branch) o;
-        return storyId == that.storyId && id == that.id &&
-                Objects.equals(branchText, that.branchText) &&
-                Objects.equals(branchDescription, that.branchDescription) &&
-                Objects.equals(choice1, that.choice1) &&
-                Objects.equals(choice2, that.choice2);
+        Branch branch = (Branch) o;
+        return id == branch.id &&
+                Objects.equals(branchText, branch.branchText) &&
+                Objects.equals(branchDescription, branch.branchDescription) &&
+                Objects.equals(choiceIds, branch.choiceIds) &&
+                Objects.equals(story, branch.story);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(storyId, id, branchText, branchDescription, choice1, choice2);
+        return Objects.hash(id, branchText, branchDescription, choiceIds, story);
     }
 
     @Override
     public String toString() {
         return "Branch{" +
-                "storyId=" + storyId +
-                ", id=" + id +
+                "id=" + id +
                 ", branchText='" + branchText + '\'' +
                 ", branchDescription='" + branchDescription + '\'' +
-                ", choice1='" + choice1 + '\'' +
-                ", choice2='" + choice2 + '\'' +
+                ", choiceIds='" + choiceIds + '\'' +
+                ", story=" + story +
                 '}';
     }
 }

@@ -18,7 +18,7 @@
             <label for="tags">Tags</label>
             <input type="text" name="tags" id="tags" class="form-control">
         </div>
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Create Story</button>
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit" name="createStory">Create Story</button>
     </form>
 </main>
 

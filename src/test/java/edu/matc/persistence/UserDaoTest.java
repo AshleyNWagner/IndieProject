@@ -6,6 +6,7 @@ import edu.matc.entity.User;
 
 import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.sql.ClientInfoStatus;
@@ -36,6 +37,7 @@ class UserDaoTest {
     /**
      * Verify getById method works.
      */
+    @Disabled
     @Test
     void getByIdSuccess() {
         User retrievedUser = (User)userDao.getById(1);
@@ -46,6 +48,7 @@ class UserDaoTest {
     /**
      * Verify getAll method works.
      */
+    @Disabled
     @Test
     void getAllSuccess() {
         List<User> users = userDao.getAll();
@@ -55,6 +58,7 @@ class UserDaoTest {
     /**
      * Verify insert method works.
      */
+    @Disabled
     @Test
     void insertSuccess() {
         User newUser = new User("Dennis", "Dennis", "DoubleDennis", "dennis@gmail.com");
@@ -84,6 +88,7 @@ class UserDaoTest {
     /**
      * Verify saveOrUpdate method works.
      */
+    @Disabled
     @Test
     void saveOrUpdateSuccess() {
         String newUserName = "newUserName";
@@ -101,6 +106,7 @@ class UserDaoTest {
      * Verify delete method works.
      */
     @Test
+    @Disabled
     void deleteSuccess() {
         User user = (User)userDao.getById(1);
         userDao.delete(user);
@@ -111,6 +117,7 @@ class UserDaoTest {
     /**
      * Verify getPropertyByLike method works.
      */
+    @Disabled
     @Test
     void getPropertyByLikeSuccess() {
         List<User> users = (List<User>)userDao.getByPropertyLike("userName", "er");
@@ -120,6 +127,7 @@ class UserDaoTest {
     /**
      * Verify getPropertyByEqual method works.
      */
+    @Disabled
     @Test
     void getPropertyByEqualSuccess() {
         List<User> users = (List<User>)userDao.getByPropertyEqual("userName", "anwagner");

@@ -30,6 +30,9 @@ public class Story {
     @OneToMany(mappedBy = "story", fetch = FetchType.EAGER)
     private Set<StoryTag> tags = new HashSet<>();
 
+    @OneToMany(mappedBy = "story", fetch = FetchType.EAGER)
+    private Set<Branch> branches = new HashSet<>();
+
     // TODO decide if you're including images
 
     /**
@@ -153,10 +156,23 @@ public class Story {
         this.tags = tags;
     }
 
+    public Set<Branch> getBranches() {
+        return branches;
+    }
+
+    public void setBranches(Set<Branch> branches) {
+        this.branches = branches;
+    }
+
     public void addTag(Tag tag) {
         StoryTag storyTag = new StoryTag(this, tag);
         tags.add(storyTag);
         tag.getStories().add(storyTag);
+    }
+
+    public void addBranch(Branch branch) {
+        branches.add(branch);
+        branch.setStory(this);
     }
 
     @Override
