@@ -49,6 +49,7 @@ public class Branch {
 
         this.branchText = branchText;
         this.branchDescription = branchDescription;
+        this.choiceIds = "";
         this.story = story;
     }
 
@@ -144,7 +145,7 @@ public class Branch {
     }
 
     public void addChoiceId(String choiceId) {
-        choiceIds += "&" + choiceId;
+        choiceIds += choiceId + "&";
     }
 
     @Override

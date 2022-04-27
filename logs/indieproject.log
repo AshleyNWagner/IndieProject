@@ -5,3 +5,65 @@
 [DEBUG] 2022-04-27 10:49:37.924 [http-nio-8080-exec-3] GenericDao - Searching for order with branchDescription = branch 2
 [DEBUG] 2022-04-27 10:56:27.634 [http-nio-8080-exec-9] GenericDao - Searching for order with branchDescription = Description 1
 [DEBUG] 2022-04-27 10:56:49.307 [http-nio-8080-exec-2] GenericDao - Searching for order with branchDescription = Second branch
+[DEBUG] 2022-04-27 11:16:11.443 [http-nio-8080-exec-2] AddBranch - New Story
+[DEBUG] 2022-04-27 11:16:11.450 [http-nio-8080-exec-2] AddBranch - addBranch
+[DEBUG] 2022-04-27 11:16:11.468 [http-nio-8080-exec-2] AddBranch - 8
+[DEBUG] 2022-04-27 11:16:16.870 [http-nio-8080-exec-3] GenericDao - Searching for order with branchDescription = New Branch 1 Description
+[DEBUG] 2022-04-27 11:16:37.234 [http-nio-8080-exec-5] AddBranch - New Story
+[DEBUG] 2022-04-27 11:16:37.234 [http-nio-8080-exec-5] AddBranch - addBranch
+[DEBUG] 2022-04-27 11:16:37.311 [http-nio-8080-exec-5] AddBranch - 9
+[DEBUG] 2022-04-27 11:22:50.628 [http-nio-8080-exec-1] AddBranch - New Title
+[DEBUG] 2022-04-27 11:22:50.633 [http-nio-8080-exec-1] AddBranch - submit: addBranch
+[DEBUG] 2022-04-27 11:22:50.655 [http-nio-8080-exec-1] AddBranch - new branch id: 10
+[DEBUG] 2022-04-27 11:22:55.299 [http-nio-8080-exec-2] GenericDao - Searching for order with branchDescription = D1
+[DEBUG] 2022-04-27 11:23:04.628 [http-nio-8080-exec-3] AddBranch - New Title
+[DEBUG] 2022-04-27 11:23:04.630 [http-nio-8080-exec-3] AddBranch - submit: addBranch
+[DEBUG] 2022-04-27 11:23:04.646 [http-nio-8080-exec-3] AddBranch - new branch id: 11
+[DEBUG] 2022-04-27 11:34:03.548 [http-nio-8080-exec-7] AddBranch - blah
+[DEBUG] 2022-04-27 11:34:03.555 [http-nio-8080-exec-7] AddBranch - submit: addBranch
+[DEBUG] 2022-04-27 11:34:03.574 [http-nio-8080-exec-7] AddBranch - new branch id: 12
+[DEBUG] 2022-04-27 11:39:55.205 [http-nio-8080-exec-7] AddBranch - new branch id: 13
+[DEBUG] 2022-04-27 11:41:36.972 [http-nio-8080-exec-7] AddBranch - new branch id: 14
+[DEBUG] 2022-04-27 11:44:19.941 [http-nio-8080-exec-7] AddBranch - new branch id: 15
+[DEBUG] 2022-04-27 11:44:27.610 [http-nio-8080-exec-8] GenericDao - Searching for order with branchDescription = 78
+[DEBUG] 2022-04-27 11:44:33.443 [http-nio-8080-exec-9] AddBranch - new branch id: 16
+[DEBUG] 2022-04-27 11:44:33.458 [http-nio-8080-exec-9] AddBranch - preceding branch id: 15
+[DEBUG] 2022-04-27 11:50:21.390 [http-nio-8080-exec-6] AddBranch - new branch id: 17
+[DEBUG] 2022-04-27 11:50:23.752 [http-nio-8080-exec-7] GenericDao - Searching for order with branchDescription = asdfdf
+[DEBUG] 2022-04-27 11:50:27.341 [http-nio-8080-exec-9] AddBranch - new branch id: 18
+[DEBUG] 2022-04-27 11:50:27.353 [http-nio-8080-exec-9] AddBranch - preceding branch id: 17
+[DEBUG] 2022-04-27 11:55:07.799 [http-nio-8080-exec-9] AddBranch - new branch id: 19
+[DEBUG] 2022-04-27 11:55:10.950 [http-nio-8080-exec-10] GenericDao - Searching for order with branchDescription = b1 
+[DEBUG] 2022-04-27 11:55:15.697 [http-nio-8080-exec-1] AddBranch - new branch id: 20
+[DEBUG] 2022-04-27 11:55:15.710 [http-nio-8080-exec-1] AddBranch - preceding branch id: 19
+[DEBUG] 2022-04-27 11:55:17.089 [http-nio-8080-exec-2] GenericDao - Searching for order with branchDescription = b1 
+[DEBUG] 2022-04-27 11:55:23.983 [http-nio-8080-exec-3] AddBranch - new branch id: 21
+[DEBUG] 2022-04-27 11:55:23.997 [http-nio-8080-exec-3] AddBranch - preceding branch id: 19
+[DEBUG] 2022-04-27 11:55:26.320 [http-nio-8080-exec-4] GenericDao - Searching for order with branchDescription = b1 
+[DEBUG] 2022-04-27 11:55:31.576 [http-nio-8080-exec-6] AddBranch - new branch id: 22
+[DEBUG] 2022-04-27 11:55:31.586 [http-nio-8080-exec-6] AddBranch - preceding branch id: 19
+[DEBUG] 2022-04-27 11:56:14.278 [http-nio-8080-exec-9] GenericDao - Searching for order with branchDescription = b4
+[DEBUG] 2022-04-27 11:56:22.094 [http-nio-8080-exec-10] AddBranch - new branch id: 23
+[DEBUG] 2022-04-27 11:56:22.105 [http-nio-8080-exec-10] AddBranch - preceding branch id: 22
+[DEBUG] 2022-04-27 11:56:44.316 [http-nio-8080-exec-3] GenericDao - Searching for order with branchDescription = b5
+[DEBUG] 2022-04-27 11:56:52.019 [http-nio-8080-exec-4] AddBranch - new branch id: 24
+[DEBUG] 2022-04-27 11:56:52.030 [http-nio-8080-exec-4] AddBranch - preceding branch id: 23
+[DEBUG] 2022-04-27 11:57:21.445 [http-nio-8080-exec-8] GenericDao - Searching for order with branchDescription = 7
+[DEBUG] 2022-04-27 11:57:27.905 [http-nio-8080-exec-7] AddBranch - new branch id: 25
+[DEBUG] 2022-04-27 11:57:27.920 [http-nio-8080-exec-7] AddBranch - preceding branch id: 24
+[DEBUG] 2022-04-27 12:01:11.508 [http-nio-8080-exec-7] AddBranch - new branch id: 26
+[DEBUG] 2022-04-27 12:01:13.467 [http-nio-8080-exec-8] GenericDao - Searching for order with branchDescription = b1
+[DEBUG] 2022-04-27 12:01:19.655 [http-nio-8080-exec-9] AddBranch - new branch id: 27
+[DEBUG] 2022-04-27 12:01:19.674 [http-nio-8080-exec-9] AddBranch - preceding branch id: 26
+[DEBUG] 2022-04-27 12:01:22.056 [http-nio-8080-exec-10] GenericDao - Searching for order with branchDescription = b1
+[DEBUG] 2022-04-27 12:01:28.970 [http-nio-8080-exec-2] AddBranch - new branch id: 28
+[DEBUG] 2022-04-27 12:01:28.983 [http-nio-8080-exec-2] AddBranch - preceding branch id: 26
+[DEBUG] 2022-04-27 12:01:33.298 [http-nio-8080-exec-3] GenericDao - Searching for order with branchDescription = b2
+[DEBUG] 2022-04-27 12:01:39.462 [http-nio-8080-exec-4] AddBranch - new branch id: 29
+[DEBUG] 2022-04-27 12:01:39.475 [http-nio-8080-exec-4] AddBranch - preceding branch id: 27
+[DEBUG] 2022-04-27 12:01:45.943 [http-nio-8080-exec-6] GenericDao - Searching for order with branchDescription = b2
+[DEBUG] 2022-04-27 12:01:53.227 [http-nio-8080-exec-5] AddBranch - new branch id: 30
+[DEBUG] 2022-04-27 12:01:53.241 [http-nio-8080-exec-5] AddBranch - preceding branch id: 27
+[DEBUG] 2022-04-27 12:03:56.566 [http-nio-8080-exec-9] GenericDao - Searching for order with branchDescription = b5
+[DEBUG] 2022-04-27 12:04:02.300 [http-nio-8080-exec-10] AddBranch - new branch id: 31
+[DEBUG] 2022-04-27 12:04:02.309 [http-nio-8080-exec-10] AddBranch - preceding branch id: 30

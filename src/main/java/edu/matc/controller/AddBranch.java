@@ -29,9 +29,8 @@ public class AddBranch extends HttpServlet {
         GenericDao branchDao = new GenericDao(Branch.class);
         GenericDao storyDao = new GenericDao(Story.class);
         HttpSession session = request.getSession();
-        String submit = request.getParameter("submit");
         Story story = (Story) session.getAttribute("currentStory");
-        Branch precedingBranch = null;
+        Branch precedingBranch = (Branch) session.getAttribute("precedingBranch");
 
         Branch branch = new Branch(
                 request.getParameter("branchText"),
@@ -40,10 +39,12 @@ public class AddBranch extends HttpServlet {
 
         int newBranchId = branchDao.insert(branch);
 
-        if (submit.equals("chooseProgression")) {
-            precedingBranch = (Branch) session.getAttribute("precedingBranch");
+        logger.debug("new branch id: " + newBranchId);
+
+        if (precedingBranch != null) {
             precedingBranch.addChoiceId(Integer.toString(newBranchId));
             branchDao.saveOrUpdate(precedingBranch);
+            logger.debug("preceding branch id: " + precedingBranch.getId());
         }
 
 

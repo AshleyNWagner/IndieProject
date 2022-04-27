@@ -2,6 +2,8 @@ package edu.matc.controller;
 
 import edu.matc.entity.Branch;
 import edu.matc.persistence.GenericDao;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,6 +20,9 @@ import java.util.List;
         urlPatterns = {"/chooseProgression"}
 )
 public class ChooseProgression extends HttpServlet {
+
+    private final Logger logger = LogManager.getLogger(this.getClass());
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         GenericDao branchDao = new GenericDao(Branch.class);
         HttpSession session = request.getSession();
