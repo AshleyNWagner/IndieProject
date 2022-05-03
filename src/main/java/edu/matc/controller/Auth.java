@@ -1,12 +1,12 @@
 package edu.matc.controller;
 
-
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.matc.auth.*;
+import edu.matc.entity.Story;
 import edu.matc.entity.User;
 import edu.matc.persistence.GenericDao;
 import edu.matc.utilities.PropertiesLoader;
@@ -20,6 +20,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.math.BigInteger;
 import java.net.URI;
@@ -77,7 +78,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String authCode = req.getParameter("code");
-        String userName = null;
+        HttpSession session = req.getSession();
+        GenericDao userDao = new GenericDao(User.class);
+        GenericDao storyDao = new GenericDao(Story.class);
+        User user = null;
 
         if (authCode == null) {
             //TODO forward to an error page or back to the login
@@ -85,11 +89,8 @@ public class Auth extends HttpServlet implements PropertiesLoader {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                User user = validate(tokenResponse);
-                req.setAttribute("userName", user.getUserName());
-                req.setAttribute("firstName", user.getFirstName());
-                req.setAttribute("lastName", user.getLastName());
-                req.setAttribute("email", user.getEmail());
+                user = validate(tokenResponse);
+                session.setAttribute("user", user);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
                 //TODO forward to an error page
@@ -98,6 +99,12 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an error page
             }
         }
+
+        if (userDao.getByPropertyEqual("userName", user.getUserName()).isEmpty()) {
+            int userId = userDao.insert(user);
+            logger.debug("user.getUserName(): " + user.getUserName());
+        }
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
         dispatcher.forward(req, resp);
 
@@ -132,7 +139,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * Get values out of the header to verify the token is legit. If it is legit, get the claims from it, such
      * as username.
      * @param tokenResponse
-     * @return
+     * @return user
      * @throws IOException
      */
     private User validate(TokenResponse tokenResponse) throws IOException {
@@ -179,18 +186,15 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         String email = jwt.getClaim("cognito:email").asString();
 
         User user = new User(firstName, lastName, userName, email);
+
+
         logger.debug("here's the username: " + userName);
-
-
+        logger.debug("here's the first name: " + firstName);
+        logger.debug("here's the last name: " + lastName);
+        logger.debug("here's the email: " + email);
 
         logger.debug("here are all the available claims: " + jwt.getClaims());
-//        GenericDao userDao = new GenericDao(User.class);
-//        if (!userDao.getByPropertyEqual("userName", userName).isEmpty()) {
-//            User newUser = new User()
-//        }
 
-        // TODO decide what you want to do with the info!
-        // for now, I'm just returning username for display back to the browser
 
         return user;
     }

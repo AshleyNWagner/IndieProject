@@ -31,9 +31,23 @@ public class User {
    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Story> stories = new HashSet<>();
 
+   // TODO add some sort of reading list
+
+    /**
+     * Instantiates a new User.
+     */
     public User() {
 
     }
+
+    /**
+     * Instantiates a new User.
+     *
+     * @param firstName the first name
+     * @param lastName  the last name
+     * @param userName  the user name
+     * @param email     the email
+     */
     public User(String firstName, String lastName, String userName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -132,7 +146,26 @@ public class User {
     }
 
     /**
+     * Gets stories.
+     *
+     * @return the stories
+     */
+    public Set<Story> getStories() {
+        return stories;
+    }
+
+    /**
+     * Sets stories.
+     *
+     * @param stories the stories
+     */
+    public void setStories(Set<Story> stories) {
+        this.stories = stories;
+    }
+
+    /**
      * Add a story to the list of user's stories.
+     *
      * @param story the story to be added
      */
     public void addStory(Story story) {
@@ -142,6 +175,7 @@ public class User {
 
     /**
      * Remove a story from the list of user's stories.
+     *
      * @param story the story to be removed
      */
     public void removeStory(Story story) {

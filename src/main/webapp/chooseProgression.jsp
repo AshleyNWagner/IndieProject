@@ -17,7 +17,7 @@
     </div>
 
     <button class="btn btn-secondary my-2 my-sm-0" type="submit" name="submit" value="chooseProgression">Continue From Branch</button>
-    <button class="btn btn-secondary my-2 my-sm-0" type="submit" formaction="index.jsp" name="finish">Finish</button>
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit" formaction="index.jsp" name="submit" value="finish">Finish</button>
 </form>
 
 <%@include file="includes/bootstrap.jsp"%>
