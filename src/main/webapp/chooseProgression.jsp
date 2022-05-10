@@ -1,9 +1,11 @@
 <%@include file="includes/taglib.jsp"%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<%@include file="includes/head.jsp"%>
+
+<c:import url="includes/head.jsp" />
 <body>
-<%@include file="includes/navigation.jsp"%>
+
+<c:import url="includes/navigation.jsp" />
 <form action="chooseProgression">
 
     <div class="form-group">
@@ -19,7 +21,6 @@
     <button class="btn btn-secondary my-2 my-sm-0" type="submit" name="submit" value="chooseProgression">Continue From Branch</button>
     <button class="btn btn-secondary my-2 my-sm-0" type="submit" formaction="index.jsp" name="submit" value="finish">Finish</button>
 </form>
-
-<%@include file="includes/bootstrap.jsp"%>
+<c:import url="includes/bootstrap.jsp" />
 </body>
 </html>

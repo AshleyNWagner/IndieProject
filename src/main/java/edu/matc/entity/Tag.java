@@ -17,8 +17,8 @@ public class Tag {
     private int id;
     private String tag;
 
-    @OneToMany(mappedBy = "tag", fetch = FetchType.EAGER)
-    private Set<StoryTag> stories = new HashSet<>();
+    @ManyToMany(mappedBy = "tags", fetch = FetchType.EAGER)
+    private Set<Story> stories = new HashSet<>();
 
     /**
      * Instantiates a new Tag.
@@ -76,7 +76,7 @@ public class Tag {
      *
      * @return the stories
      */
-    public Set<StoryTag> getStories() {
+    public Set<Story> getStories() {
         return stories;
     }
 
@@ -85,7 +85,7 @@ public class Tag {
      *
      * @param stories the stories
      */
-    public void setStories(Set<StoryTag> stories) {
+    public void setStories(Set<Story> stories) {
         this.stories = stories;
     }
 

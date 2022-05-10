@@ -1,6 +1,8 @@
 package edu.matc.entity;
 
 import org.hibernate.annotations.GenericGenerator;
+
+import java.io.Serializable;
 import java.time.*;
 import java.util.*;
 import javax.persistence.*;
@@ -10,7 +12,7 @@ import javax.persistence.*;
  */
 @Entity(name = "Story")
 @Table(name = "stories")
-public class Story {
+public class Story implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -27,8 +29,17 @@ public class Story {
     @Column(name = "date_created")
     private LocalDate dateCreated;
 
-    @OneToMany(mappedBy = "story", fetch = FetchType.EAGER)
-    private Set<StoryTag> tags = new HashSet<>();
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(name= "story_tags",
+        joinColumns = @JoinColumn(name = "story_id"),
+        inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    private Set<Tag> tags = new HashSet<>();
+
+//  https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
 
     @OneToMany(mappedBy = "story", fetch = FetchType.EAGER)
     private Set<Branch> branches = new HashSet<>();
@@ -148,28 +159,57 @@ public class Story {
         this.dateCreated = dateCreated;
     }
 
-    public Set<StoryTag> getTags() {
+    /**
+     * Gets tags.
+     *
+     * @return the tags
+     */
+    public Set<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(Set<StoryTag> tags) {
+    /**
+     * Sets tags.
+     *
+     * @param tags the tags
+     */
+    public void setTags(Set<Tag> tags) {
         this.tags = tags;
     }
 
+    /**
+     * Gets branches.
+     *
+     * @return the branches
+     */
     public Set<Branch> getBranches() {
         return branches;
     }
 
+    /**
+     * Sets branches.
+     *
+     * @param branches the branches
+     */
     public void setBranches(Set<Branch> branches) {
         this.branches = branches;
     }
 
+    /**
+     * Add tag.
+     *
+     * @param tag the tag
+     */
     public void addTag(Tag tag) {
-        StoryTag storyTag = new StoryTag(this, tag);
-        tags.add(storyTag);
-        tag.getStories().add(storyTag);
+        tags.add(tag);
+        tag.getStories().add(this);
     }
 
+    /**
+     * Add branch.
+     *
+     * @param branch the branch
+     */
     public void addBranch(Branch branch) {
         branches.add(branch);
         branch.setStory(this);

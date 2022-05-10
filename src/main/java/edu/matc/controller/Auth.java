@@ -6,7 +6,6 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.matc.auth.*;
-import edu.matc.entity.Story;
 import edu.matc.entity.User;
 import edu.matc.persistence.GenericDao;
 import edu.matc.utilities.PropertiesLoader;
@@ -58,6 +57,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     String REGION;
     String POOL_ID;
     Keys jwks;
+    GenericDao userDao;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -66,6 +66,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         super.init();
         loadProperties();
         loadKey();
+        userDao = new GenericDao(User.class);
     }
 
     /**
@@ -79,18 +80,17 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String authCode = req.getParameter("code");
         HttpSession session = req.getSession();
-        GenericDao userDao = new GenericDao(User.class);
-        GenericDao storyDao = new GenericDao(Story.class);
+        HashMap<String, String> userData = new HashMap<>();
         User user = null;
-
         if (authCode == null) {
             //TODO forward to an error page or back to the login
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                user = validate(tokenResponse);
-                session.setAttribute("user", user);
+                userData = validate(tokenResponse);
+                user = new User(userData.get("userName"), userData.get("firstName"), userData.get("lastName"), userData.get("email"));
+                session.setAttribute("currentUser", user);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
                 //TODO forward to an error page
@@ -99,10 +99,10 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an error page
             }
         }
+        List<User> storedUsers = userDao.getByPropertyEqual("userName", userData.get("userName"));
 
-        if (userDao.getByPropertyEqual("userName", user.getUserName()).isEmpty()) {
+        if (storedUsers.isEmpty()) {
             int userId = userDao.insert(user);
-            logger.debug("user.getUserName(): " + user.getUserName());
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
@@ -142,7 +142,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * @return user
      * @throws IOException
      */
-    private User validate(TokenResponse tokenResponse) throws IOException {
+    private HashMap<String, String> validate(TokenResponse tokenResponse) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         CognitoTokenHeader tokenHeader = mapper.readValue(CognitoJWTParser.getHeader(tokenResponse.getIdToken()).toString(), CognitoTokenHeader.class);
 
@@ -181,22 +181,18 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
         String userName = jwt.getClaim("cognito:username").asString();
-        String firstName = jwt.getClaim("cognito:given_name").asString();
-        String lastName = jwt.getClaim("cognito:family_name").asString();
-        String email = jwt.getClaim("cognito:email").asString();
+        String firstName = jwt.getClaim("given_name").asString();
+        String lastName = jwt.getClaim("family_name").asString();
+        String email = jwt.getClaim("email").asString();
 
-        User user = new User(firstName, lastName, userName, email);
-
-
-        logger.debug("here's the username: " + userName);
-        logger.debug("here's the first name: " + firstName);
-        logger.debug("here's the last name: " + lastName);
-        logger.debug("here's the email: " + email);
-
-        logger.debug("here are all the available claims: " + jwt.getClaims());
+        HashMap<String, String> userData = new HashMap<>();
+        userData.put("userName", userName);
+        userData.put("firstName", firstName);
+        userData.put("lastName", lastName);
+        userData.put("email", email);
 
 
-        return user;
+        return userData;
     }
 
     /** Create the auth url and use it to build the request.

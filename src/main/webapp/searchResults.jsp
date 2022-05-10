@@ -2,13 +2,59 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<%@include file="includes/head.jsp"%>
+<c:import url="includes/head.jsp" />
 <body>
-<%@include file="includes/navigation.jsp"%>
-    <h2>Users like <em>${searchTerm}</em></h2>
-    <c:forEach var="user" items="${users}">
-        <p>${user.userName}</p>
-    </c:forEach>
+<c:import url="includes/navigation.jsp" />
+
+<h2>Stories By Title</h2>
+<c:choose>
+    <c:when test="${not empty searchedStoriesByTitle}">
+        <c:forEach var="storyByTitle" items="${searchedStoriesByTitle}">
+<%--            <a href="readStory">${storyByTitle.title}</a>--%>
+<%--            <a href="readStory">${storyByTitle.description}</a>--%>
+
+
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${storyByTitle.title}</h5>
+                    <p class="card-text">${storyByTitle.description}</p>
+                    <form action="readStory">
+                        <button class="btn btn-secondary" type="submit" name="searchResultsSubmit" value="${storyByTitle.id}">Continue From Branch</button>
+                    </form>
+                </div>
+            </div>
+        </c:forEach>
+    </c:when>
+    <c:otherwise>
+        <p>No Results found.</p>
+    </c:otherwise>
+</c:choose>
+
+<h2>Stories By Tag</h2>
+<c:choose>
+    <c:when test="${not empty searchedStoriesByTag}">
+        <c:forEach var="storyByTag" items="${searchedStoriesByTag}">
+            <a href="readStory">${storyByTag.title}</a>
+        </c:forEach>
+    </c:when>
+    <c:otherwise>
+        <p>No results found.</p>
+    </c:otherwise>
+</c:choose>
+
+<h2>Stories By Author</h2>
+<c:choose>
+    <c:when test="${not empty searchedStoriesByUser}">
+        <c:forEach var="storyByUser" items="${searchedStoriesByUser}">
+            <a href="readStory">${storyByUser.title}</a>
+        </c:forEach>
+    </c:when>
+    <c:otherwise>
+        <p>No results found.</p>
+    </c:otherwise>
+</c:choose>
 
 
 <%--<main class="p-3">--%>
@@ -29,17 +75,10 @@
 <%--    </div>--%>
 
 <%--    --%>
-<%--    <div class="card" style="width: 18rem;">--%>
-<%--        <img class="card-img-top" src="..." alt="Card image cap">--%>
-<%--        <div class="card-body">--%>
-<%--            <h5 class="card-title">Card title</h5>--%>
-<%--            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>--%>
-<%--            <a href="#" class="btn btn-primary">Go somewhere</a>--%>
-<%--        </div>--%>
-<%--    </div>--%>
+
 
 <%--</main>--%>
 
-<%@include file="includes/bootstrap.jsp"%>
+<c:import url="includes/bootstrap.jsp" />
 </body>
 </html>

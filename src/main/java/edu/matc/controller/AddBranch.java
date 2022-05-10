@@ -39,12 +39,9 @@ public class AddBranch extends HttpServlet {
 
         int newBranchId = branchDao.insert(branch);
 
-        logger.debug("new branch id: " + newBranchId);
-
         if (precedingBranch != null) {
             precedingBranch.addChoiceId(Integer.toString(newBranchId));
             branchDao.saveOrUpdate(precedingBranch);
-            logger.debug("preceding branch id: " + precedingBranch.getId());
         }
 
 

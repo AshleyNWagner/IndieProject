@@ -1,13 +1,11 @@
 <%@include file="includes/taglib.jsp"%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<%@include file="includes/head.jsp"%>
+<c:import url="includes/head.jsp" />
 <body>
-<%@include file="includes/navigation.jsp"%>
+<c:import url="includes/navigation.jsp" />
 
 <main>
-
-    <p>${user.userName}</p>
     <c:if test="${not empty user.stories}">
         <c:forEach var="story" items="${user.stories}">
             <div class="card" style="width: 18rem;">
@@ -24,8 +22,7 @@
 </main>
 
 
-
-<%@include file="includes/bootstrap.jsp"%>
+<c:import url="includes/bootstrap.jsp" />
 </body>
 </html>
 
