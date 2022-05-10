@@ -14,7 +14,7 @@
         </div>
 
         <div class="form-group">
-            <label for="branchText" class="form-label mt-4">Add Text Body</label>
+            <label for="branchText" class="form-label mt-4">Text Body</label>
             <textarea class="form-control" id="branchText" name="branchText" rows="3"></textarea>
         </div>
 

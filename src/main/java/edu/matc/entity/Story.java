@@ -42,7 +42,7 @@ public class Story implements Serializable {
 //  https://vladmihalcea.com/the-best-way-to-use-the-manytomany-annotation-with-jpa-and-hibernate/
 
     @OneToMany(mappedBy = "story", fetch = FetchType.EAGER)
-    private Set<Branch> branches = new HashSet<>();
+    private List<Branch> branches = new ArrayList<>();
 
     // TODO decide if you're including images
 
@@ -182,7 +182,7 @@ public class Story implements Serializable {
      *
      * @return the branches
      */
-    public Set<Branch> getBranches() {
+    public List<Branch> getBranches() {
         return branches;
     }
 
@@ -191,7 +191,7 @@ public class Story implements Serializable {
      *
      * @param branches the branches
      */
-    public void setBranches(Set<Branch> branches) {
+    public void setBranches(List<Branch> branches) {
         this.branches = branches;
     }
 

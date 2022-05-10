@@ -76,3 +76,57 @@
 [DEBUG] 2022-05-09 19:35:10.488 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
 [DEBUG] 2022-05-09 19:35:11.326 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
 [DEBUG] 2022-05-09 19:35:11.724 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-09 19:42:33.918 [http-nio-8080-exec-6] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-09 19:42:34.718 [http-nio-8080-exec-6] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-09 19:42:35.127 [http-nio-8080-exec-6] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 05:32:29.556 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 05:32:30.628 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 05:32:31.214 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 06:07:22.510 [http-nio-8080-exec-8] GenericDao - Searching for order with branchDescription = First Branch
+[DEBUG] 2022-05-10 07:17:48.583 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 07:17:49.411 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 07:17:49.815 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 07:17:52.959 [http-nio-8080-exec-6] GenericDao - Searching for order with storyId = 17
+[DEBUG] 2022-05-10 07:31:46.178 [http-nio-8080-exec-10] GenericDao - Searching for order with branchDescription = Green
+[DEBUG] 2022-05-10 07:31:49.822 [http-nio-8080-exec-1] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 07:31:50.100 [http-nio-8080-exec-1] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 07:31:50.479 [http-nio-8080-exec-1] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 10:22:05.270 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 10:22:06.100 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 10:22:06.487 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 10:27:21.153 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 10:27:22.022 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 10:27:22.410 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 10:34:41.149 [http-nio-8080-exec-6] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 10:34:41.986 [http-nio-8080-exec-6] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 10:34:42.400 [http-nio-8080-exec-6] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 10:38:33.835 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 10:38:34.662 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 10:38:35.043 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 10:52:52.950 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 10:52:53.836 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 10:52:54.252 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 10:54:59.582 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 10:55:00.407 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 10:55:00.813 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 10:57:49.685 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 10:57:50.516 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 10:57:50.908 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 11:03:46.978 [http-nio-8080-exec-6] GenericDao - Searching for entity with title like red
+[DEBUG] 2022-05-10 11:03:47.768 [http-nio-8080-exec-6] GenericDao - Searching for entity with tag like red
+[DEBUG] 2022-05-10 11:03:48.142 [http-nio-8080-exec-6] GenericDao - Searching for entity with userName like red
+[DEBUG] 2022-05-10 11:22:07.289 [http-nio-8080-exec-3] GenericDao - Searching for order with branchDescription = This is the first excerpt.
+[DEBUG] 2022-05-10 11:22:53.540 [http-nio-8080-exec-7] GenericDao - Searching for order with branchDescription = This is the first excerpt.
+[DEBUG] 2022-05-10 11:23:26.988 [http-nio-8080-exec-1] GenericDao - Searching for order with branchDescription = This is excerpt 2a.
+[DEBUG] 2022-05-10 11:23:56.711 [http-nio-8080-exec-4] GenericDao - Searching for order with branchDescription = This is excerpt 2a.
+[DEBUG] 2022-05-10 11:24:23.195 [http-nio-8080-exec-7] GenericDao - Searching for order with branchDescription = This is excerpt 2b.
+[DEBUG] 2022-05-10 11:24:51.252 [http-nio-8080-exec-10] GenericDao - Searching for order with branchDescription = This is excerpt 2b.
+[DEBUG] 2022-05-10 11:25:19.358 [http-nio-8080-exec-4] GenericDao - Searching for entity with title like romance
+[DEBUG] 2022-05-10 11:25:19.607 [http-nio-8080-exec-4] GenericDao - Searching for entity with tag like romance
+[DEBUG] 2022-05-10 11:25:20.008 [http-nio-8080-exec-4] GenericDao - Searching for entity with userName like romance
+[DEBUG] 2022-05-10 11:25:29.921 [http-nio-8080-exec-6] GenericDao - Searching for entity with title like title
+[DEBUG] 2022-05-10 11:25:30.210 [http-nio-8080-exec-6] GenericDao - Searching for entity with tag like title
+[DEBUG] 2022-05-10 11:25:30.430 [http-nio-8080-exec-6] GenericDao - Searching for entity with userName like title
+[DEBUG] 2022-05-10 11:26:01.348 [http-nio-8080-exec-1] GenericDao - Searching for entity with title like title
+[DEBUG] 2022-05-10 11:26:01.629 [http-nio-8080-exec-1] GenericDao - Searching for entity with tag like title
+[DEBUG] 2022-05-10 11:26:01.842 [http-nio-8080-exec-1] GenericDao - Searching for entity with userName like title

@@ -10,18 +10,14 @@
 <c:choose>
     <c:when test="${not empty searchedStoriesByTitle}">
         <c:forEach var="storyByTitle" items="${searchedStoriesByTitle}">
-<%--            <a href="readStory">${storyByTitle.title}</a>--%>
-<%--            <a href="readStory">${storyByTitle.description}</a>--%>
-
-
-
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+<%--                <img class="card-img-top" src="..." alt="Card image cap">--%>
                 <div class="card-body">
                     <h5 class="card-title">${storyByTitle.title}</h5>
                     <p class="card-text">${storyByTitle.description}</p>
+
                     <form action="readStory">
-                        <button class="btn btn-secondary" type="submit" name="searchResultsSubmit" value="${storyByTitle.id}">Continue From Branch</button>
+                        <button class="btn btn-secondary" type="submit" name="searchResultsSubmit" value="${storyByTitle.id}">Read</button>
                     </form>
                 </div>
             </div>
