@@ -23,8 +23,6 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit" name="createStory">Create Story</button>
     </form>
 </main>
-
-
 <c:import url="includes/bootstrap.jsp" />
 </body>
 </html>

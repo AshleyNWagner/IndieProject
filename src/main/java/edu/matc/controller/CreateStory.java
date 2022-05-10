@@ -31,7 +31,7 @@ public class CreateStory extends HttpServlet {
         User user = new User("firstName", "lastName", "userName", "email");
 
 //        if (session.getAttribute("currentUser") == null) {
-//            response.sendRedirect("/logIn");
+//            request.getRequestDispatcher("logIn").forward(request, response);
 //        } else {
 //            user = (User) session.getAttribute("currentUser");
 //        }

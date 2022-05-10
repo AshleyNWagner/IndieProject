@@ -1,13 +1,14 @@
-<%@include file="includes/taglib.jsp"%>
+<%@include file="../includes/taglib.jsp"%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<c:import url="includes/head.jsp" />
+<jsp: page="loadIndex" />
+<c:import url="../includes/head.jsp" />
 <body>
-<c:import url="includes/navigation.jsp" />
+<c:import url="../includes/navigation.jsp" />
 
 <main>
-    <c:if test="${not empty user.stories}">
-        <c:forEach var="story" items="${user.stories}">
+    <c:if test="${not empty recentStories}">
+        <c:forEach var="story" items="${recentStories}">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
@@ -22,7 +23,7 @@
 </main>
 
 
-<c:import url="includes/bootstrap.jsp" />
+<c:import url="../includes/bootstrap.jsp" />
 </body>
 </html>
 

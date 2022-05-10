@@ -55,9 +55,10 @@ public class ReadStory extends HttpServlet {
                 Branch branchChoice = branchDao.getById(Integer.parseInt(choiceId));
                 choiceMap.put(choiceId, branchChoice.getBranchDescription());
             }
-        } else {
-            request.getRequestDispatcher("endStory.jsp").forward(request, response);
         }
+//        else {
+//            request.getRequestDispatcher("endStory.jsp").forward(request, response);
+//        }
 
         request.setAttribute("selectedBranch", selectedBranch);
         request.setAttribute("choiceIdMap", choiceMap);

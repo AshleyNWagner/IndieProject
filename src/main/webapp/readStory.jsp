@@ -11,9 +11,16 @@
 <p>${selectedBranch.branchText}</p>
 
 <form action="readStory">
-    <c:forEach var="choiceId" items="${choiceIdMap}">
-        <button class="btn btn-secondary" type="submit" name="branchChoiceSubmit" value="${choiceId.key}">${choiceId.value}</button>
-    </c:forEach>
+    <c:choose>
+        <c:when test="${not empty choiceIdMap}">
+            <c:forEach var="choiceId" items="${choiceIdMap}">
+                <button class="btn btn-secondary" type="submit" name="branchChoiceSubmit" value="${choiceId.key}">${choiceId.value}</button>
+            </c:forEach>
+        </c:when>
+        <c:otherwise>
+            <p>End of Story.<a href="WEB-INF/index.jsp"> Browse more titles.</a></p>
+        </c:otherwise>
+    </c:choose>
 </form>
 <c:import url="includes/bootstrap.jsp" />
 </body>

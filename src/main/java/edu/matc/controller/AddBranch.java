@@ -51,7 +51,6 @@ public class AddBranch extends HttpServlet {
 
         storyDao.saveOrUpdate(story);
 
-
         RequestDispatcher dispatcher = request.getRequestDispatcher("/chooseProgression.jsp");
         dispatcher.forward(request, response);
 
