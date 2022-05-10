@@ -1,10 +1,10 @@
-<%@include file="includes/taglib.jsp"%>
+<%@include file="../includes/taglib.jsp"%>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<jsp: page="loadIndex" />
-<c:import url="includes/head.jsp" />
+
+<c:import url="../includes/head.jsp" />
 <body>
-<c:import url="includes/navigation.jsp" />
+<c:import url="../includes/navigation.jsp" />
 
 <main>
     <c:if test="${not empty recentStories}">
@@ -23,7 +23,7 @@
 </main>
 
 
-<c:import url="includes/bootstrap.jsp" />
+<c:import url="../includes/bootstrap.jsp" />
 </body>
 </html>
 

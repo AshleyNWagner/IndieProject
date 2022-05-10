@@ -7,7 +7,7 @@
 
 <main>
     <h1>End of Story,</h1>
-    <h2><a href="index.jsp">Browse more titles</a></h2>
+    <h2><a href="WEB-INF/index.jsp">Browse more titles</a></h2>
 </main>
 
 
