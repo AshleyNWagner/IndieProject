@@ -18,7 +18,7 @@
             </c:forEach>
         </c:when>
         <c:otherwise>
-            <p>End of Story.<a href="WEB-INF/index.jsp"> Browse more titles.</a></p>
+            <p>End of Story.<a href="index.jsp"> Browse more titles.</a></p>
         </c:otherwise>
     </c:choose>
 </form>
