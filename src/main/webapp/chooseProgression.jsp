@@ -6,20 +6,19 @@
 <body>
 
 <c:import url="includes/navigation.jsp" />
-<form action="chooseProgression">
-
+<form style="width:50%; margin: 1em auto" action="chooseProgression">
+    <legend>Choose Branch to Continue.</legend>
     <div class="form-group">
-        <label for="exampleSelect1" class="form-label mt-4">Example select</label>
-        <option disabled selected value> -- select branch to continue -- </option>
-        <select name="branch" class="form-select" id="exampleSelect1">
+        <label for="branchSelect" class="form-label mt-4">Previous Branches</label>
+        <select name="branch" class="form-select" id="branchSelect">
+            <option disabled selected value> -- select branch to continue -- </option>
             <c:forEach var="branch" items="${currentStory.branches}">
                 <option value="${branch.branchDescription}">${branch.branchDescription}</option>
             </c:forEach>
         </select>
-    </div>
-
-    <button class="btn btn-secondary my-2 my-sm-0" type="submit" name="submit" value="chooseProgression">Continue From Branch</button>
-    <button class="btn btn-secondary my-2 my-sm-0" type="submit" formaction="index.jsp" name="submit" value="finish">Finish</button>
+    </div><br><br>
+    <button class="btn btn-secondary btn-lg" type="submit" name="submit" value="chooseProgression">Continue From Branch</button>
+    <button class="btn btn-secondary btn-lg" type="submit" formaction="loadIndex" name="submit" value="finish">Finish</button>
 </form>
 <c:import url="includes/bootstrap.jsp" />
 </body>

@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: anwagner
-  Date: 5/11/22
-  Time: 10:42 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>This is not done.</title>
-</head>
-<body>
+<%@include file="includes/taglib.jsp"%>
 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<c:import url="includes/head.jsp" />
+<body>
+<c:import url="includes/navigation.jsp" />
+
+<c:import url="includes/bootstrap.jsp" />
 </body>
 </html>

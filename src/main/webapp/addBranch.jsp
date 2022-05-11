@@ -8,16 +8,19 @@
 <main>
 
     <%--    https://ckeditor.com/docs/ckeditor5/latest/installation/advanced/saving-data.html--%>
-    <form action="addBranch" method="post">
+    <form action="addBranch" style="width:50%; margin: 1em auto" method="post">
+        <legend>Add a New Branch.</legend>
         <div class="form-group">
-            <label for="branchDescription" class="form-label mt-4">Branch Description</label>
-            <input type="text" name="branchDescription" id="branchDescription" class="form-control">
+            <label for="branchDescription" class="form-label mt-4">Choice Description</label>
+            <input type="text" name="branchDescription" id="branchDescription" placeholder="Enter something like 'Go through the door'" class="form-control">
         </div>
         <div class="form-group">
             <label for="editor" class="form-label mt-4">Text Body</label>
-            <textarea class="form-control" id="editor" name="branchText" rows="3"></textarea>
+            <textarea class="form-control" style="height: 200px;" id="editor" name="branchText" rows="20"></textarea>
         </div>
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit" name="submit" value="addBranch">Add Branch</button>
+        <div>
+            <button class="btn btn-secondary btn-lg" type="submit" name="submit" value="addBranch">Add Branch</button>
+        </div>
     </form>
     <script>
         ClassicEditor
@@ -28,6 +31,7 @@
         document.querySelector( '#submit' ).addEventListener( 'click', () => {
             const editorData = editor.getData();
         } );
+
     </script>
 </main>
 <c:import url="includes/bootstrap.jsp" />

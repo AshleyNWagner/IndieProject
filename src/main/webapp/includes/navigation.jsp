@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="loadIndex">IndieProject</a>
@@ -20,11 +21,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="createStory.jsp">Write</a>
                 </li>
-                <c:if test="${empty user}">
-                    <li class="nav-item">
-                        <a class="nav-link" href="logIn">Log In</a>
-                    </li>
-                </c:if>
+                <c:choose>
+                    <c:when test="${empty user}">
+                        <li class="nav-item">
+                            <a class="nav-link" href="logIn">Log In</a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item">
+                            <a class="nav-link" href="loadProfile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log Out</a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+
             </ul>
             <form class="d-flex" action="search">
                 <input class="form-control me-sm-2" type="text" name="searchTerm" placeholder="Search">
