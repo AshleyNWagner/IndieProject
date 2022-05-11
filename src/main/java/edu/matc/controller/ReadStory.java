@@ -36,7 +36,12 @@ public class ReadStory extends HttpServlet {
             String storyId = request.getParameter("searchResultsSubmit");
             currentRead = storyDao.getById(Integer.parseInt(storyId));
             session.setAttribute("currentRead", currentRead);
+        } else if (request.getParameter("indexSubmit") != null) {
+            String storyId = request.getParameter("indexSubmit");
+            currentRead = storyDao.getById(Integer.parseInt(storyId));
+            session.setAttribute("currentRead", currentRead);
         }
+
 
         currentRead = (Story) session.getAttribute("currentRead");
         storyBranches = (List<Branch>) currentRead.getBranches();

@@ -27,7 +27,9 @@
                     <p class="card-text ms-2">${story.description}</p>
                 </div>
                 <div class="my-2 ms-3">
-                    <button class="btn btn-primary px-4 py-2 my-sm-0" type="submit" name="submit" value="${story.id}">Read</button>
+                    <form action="readStory">
+                        <button class="btn btn-primary px-4 py-2 my-sm-0" type="submit" name="indexSubmit" value="${story.id}">Read</button>
+                    </form>
                 </div>
             </div>
             </div>
