@@ -8,7 +8,7 @@
 <c:import url="../includes/navigation.jsp" />
 <div class="container bg-white p-0">
 
-<main class="p-3">
+<main class="p-2">
     <h1 class="text-dark text-left">Recent Additions</h1>
     <c:if test="${not empty recentStories}">
     <div class="row">
