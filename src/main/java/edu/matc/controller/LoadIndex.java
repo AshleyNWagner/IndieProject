@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+//https://stackoverflow.com/questions/15839854/how-load-servlet-on-index-jsp
+//https://stackoverflow.com/questions/31579716/load-on-start-up-throwing-404?rq=1
 
 public class LoadIndex extends HttpServlet {
 
