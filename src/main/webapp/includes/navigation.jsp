@@ -22,7 +22,7 @@
                     <a class="nav-link" href="createStory.jsp">Write</a>
                 </li>
                 <c:choose>
-                    <c:when test="${empty user}">
+                    <c:when test="${empty currentUser}">
                         <li class="nav-item">
                             <a class="nav-link" href="logIn">Log In</a>
                         </li>

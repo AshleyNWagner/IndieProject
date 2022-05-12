@@ -18,6 +18,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * The type Add branch.
+ */
 @WebServlet(
         name = "addBranch",
         urlPatterns = {"/addBranch"}

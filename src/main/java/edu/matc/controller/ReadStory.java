@@ -14,6 +14,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * Servlet that displays the relevent excerpt for the user.
+ */
 @WebServlet(
         name = "readStory",
         urlPatterns = {"/readStory"}

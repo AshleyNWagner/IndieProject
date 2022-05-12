@@ -144,6 +144,11 @@ public class Branch {
         this.story = story;
     }
 
+    /**
+     * Add choice id.
+     *
+     * @param choiceId the choice id
+     */
     public void addChoiceId(String choiceId) {
         choiceIds += choiceId + "&";
     }

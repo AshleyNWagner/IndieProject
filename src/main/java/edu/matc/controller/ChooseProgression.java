@@ -15,6 +15,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * The type Choose progression.
+ */
 @WebServlet(
         name = "chooseProgression",
         urlPatterns = {"/chooseProgression"}

@@ -79,18 +79,17 @@ public class Auth extends HttpServlet implements PropertiesLoader {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String authCode = req.getParameter("code");
+        String userName = null;
         HttpSession session = req.getSession();
-        HashMap<String, String> userData = new HashMap<>();
-        User user = null;
+
         if (authCode == null) {
             //TODO forward to an error page or back to the login
         } else {
             HttpRequest authRequest = buildAuthRequest(authCode);
             try {
                 TokenResponse tokenResponse = getToken(authRequest);
-                userData = validate(tokenResponse);
-                user = new User(userData.get("userName"), userData.get("firstName"), userData.get("lastName"), userData.get("email"));
-                session.setAttribute("currentUser", user);
+                userName = validate(tokenResponse);
+                req.setAttribute("userName", userName);
             } catch (IOException e) {
                 logger.error("Error getting or validating the token: " + e.getMessage(), e);
                 //TODO forward to an error page
@@ -99,13 +98,18 @@ public class Auth extends HttpServlet implements PropertiesLoader {
                 //TODO forward to an error page
             }
         }
-        List<User> storedUsers = userDao.getByPropertyEqual("userName", userData.get("userName"));
+        List<User> storedUsers = userDao.getByPropertyEqual("userName", userName);
 
         if (storedUsers.isEmpty()) {
-            int userId = userDao.insert(user);
+            User newUser = new User(userName);
+            int userId = userDao.insert(newUser);
+            User insertedUser = (User) userDao.getById(userId);
+            session.setAttribute("currentUser", insertedUser);
+        } else {
+            session.setAttribute("currentUser", storedUsers.get(0));
         }
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("index.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("loadIndex");
         dispatcher.forward(req, resp);
 
     }
@@ -142,7 +146,7 @@ public class Auth extends HttpServlet implements PropertiesLoader {
      * @return user
      * @throws IOException
      */
-    private HashMap<String, String> validate(TokenResponse tokenResponse) throws IOException {
+    private String validate(TokenResponse tokenResponse) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         CognitoTokenHeader tokenHeader = mapper.readValue(CognitoJWTParser.getHeader(tokenResponse.getIdToken()).toString(), CognitoTokenHeader.class);
 
@@ -181,18 +185,30 @@ public class Auth extends HttpServlet implements PropertiesLoader {
         // Verify the token
         DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
         String userName = jwt.getClaim("cognito:username").asString();
-        String firstName = jwt.getClaim("given_name").asString();
-        String lastName = jwt.getClaim("family_name").asString();
-        String email = jwt.getClaim("email").asString();
+        logger.debug("here's the username: " + userName);
 
-        HashMap<String, String> userData = new HashMap<>();
-        userData.put("userName", userName);
-        userData.put("firstName", firstName);
-        userData.put("lastName", lastName);
-        userData.put("email", email);
+        logger.debug("here are all the available claims: " + jwt.getClaims());
 
+        // TODO decide what you want to do with the info!
+        // for now, I'm just returning username for display back to the browser
 
-        return userData;
+        return userName;
+
+//        Verify the token
+//        DecodedJWT jwt = verifier.verify(tokenResponse.getIdToken());
+//        String userName = jwt.getClaim("cognito:username").asString();
+//        String firstName = jwt.getClaim("cognito:given_name").asString();
+//        String lastName = jwt.getClaim("cognito:family_name").asString();
+//        String email = jwt.getClaim("cognito:email").asString();
+//
+//        HashMap<String, String> userData = new HashMap<>();
+//        userData.put("userName", userName);
+//        userData.put("firstName", firstName);
+//        userData.put("lastName", lastName);
+//        userData.put("email", email);
+//
+//
+//        return userData;
     }
 
     /** Create the auth url and use it to build the request.
